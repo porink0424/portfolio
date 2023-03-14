@@ -1,0 +1,21 @@
+.languageSelector {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  > .image {
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+
+  > .opener {
+    display: inline-block;
+    $size: 8px;
+    width: $size;
+    height: $size;
+    transform: translateY(-2px) rotate(45deg);
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+}

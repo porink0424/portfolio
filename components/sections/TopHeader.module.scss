@@ -1,0 +1,62 @@
+.topHeader {
+  height: 56px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+
+  > .name {
+    margin: 0 16px;
+  }
+
+  > .sectionItems {
+    display: flex;
+    justify-content: right;
+    flex: 1;
+    height: 36px;
+    margin-right: 14px;
+    position: relative;
+
+    > .bar {
+      width: 0;
+      background-color: #000;
+      height: 3px;
+      top: 38px;
+      border-radius: 9999px;
+      position: absolute;
+      transition: width 0.5s ease, left 0.5s ease;
+    }
+
+    > .wrapper {
+      display: flex;
+
+      > .item {
+        font-size: 12px;
+        font-weight: 700;
+        white-space: pre-wrap;
+        line-height: 1;
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        height: 100%;
+        text-align: center;
+        transition: background-color 0.4s;
+
+        &:not(:last-child) {
+          border-right: 1px solid #999;
+        }
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+
+  > .languageselector {
+    margin: 0 20px 0 16px;
+    width: 44px;
+    height: 16px;
+  }
+}
