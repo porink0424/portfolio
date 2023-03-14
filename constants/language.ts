@@ -1,4 +1,4 @@
 export const LANGUAGE = {
-  JP: "jp",
-  EN: "en",
+  JP: "日本語",
+  EN: "English",
 } as const;

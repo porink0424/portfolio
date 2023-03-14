@@ -6,12 +6,12 @@ import styles from "./index.module.scss";
 
 export default function Home() {
   const sectionAboutRef = useRef(null);
-  const sectionDevelopmentExperiencesRef = useRef(null);
+  const sectionExperiencesRef = useRef(null);
   const sectionResearchRef = useRef(null);
   const sectionHobbyRef = useRef(null);
   useMainSection([
     sectionAboutRef,
-    sectionDevelopmentExperiencesRef,
+    sectionExperiencesRef,
     sectionResearchRef,
     sectionHobbyRef,
   ]);
@@ -38,8 +38,8 @@ export default function Home() {
 
       <section
         id={SECTION_DOM_ID[1]}
-        className={styles.sectionDevelopmentExperiences}
-        ref={sectionDevelopmentExperiencesRef}
+        className={styles.sectionExperiences}
+        ref={sectionExperiencesRef}
       >
         <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
         <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
