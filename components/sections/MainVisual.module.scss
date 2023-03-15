@@ -1,5 +1,5 @@
 .mainVisual {
-  $aspectRatio: 1/0.3;
+  $aspectRatio: 1/0.35;
 
   > .imagewrapper {
     width: 100%;
@@ -20,7 +20,10 @@
     background: linear-gradient(to bottom, transparent, transparent 70%, #fff);
     color: #fff;
     font-weight: 700;
-    padding: 66px 48px;
+    padding: 0 48px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 
     > .belonging {
       font-size: 14px;
@@ -28,6 +31,7 @@
 
     > .name {
       font-size: 44px;
+      padding-bottom: 40px;
     }
   }
 }
