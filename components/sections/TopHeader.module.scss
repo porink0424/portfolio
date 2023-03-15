@@ -1,8 +1,9 @@
 .topHeader {
   height: 56px;
-  background-color: #eee;
+  background-color: #d9d9d9;
   display: flex;
   align-items: center;
+  z-index: var(--z-index-top-header);
 
   > .name {
     margin: 0 16px;

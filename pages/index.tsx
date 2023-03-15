@@ -1,3 +1,4 @@
+import MainVisual from "@/components/sections/MailVisual";
 import TopHeader from "@/components/sections/TopHeader";
 import { SECTION_DOM_ID } from "@/constants/section";
 import useMainSection from "@/hooks/useMainSection";
@@ -20,6 +21,10 @@ export default function Home() {
     <>
       <section className={styles.topHeader}>
         <TopHeader />
+      </section>
+
+      <section className={styles.mainVisual}>
+        <MainVisual />
       </section>
 
       <section

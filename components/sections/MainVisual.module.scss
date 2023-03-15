@@ -1,0 +1,33 @@
+.mainVisual {
+  $aspectRatio: 1/0.3;
+
+  > .imagewrapper {
+    width: 100%;
+    aspect-ratio: $aspectRatio;
+    position: fixed;
+    z-index: var(--z-index-main-visual);
+
+    > .image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  > .content {
+    width: 100%;
+    aspect-ratio: $aspectRatio;
+    background: linear-gradient(to bottom, transparent, transparent 70%, #fff);
+    color: #fff;
+    font-weight: 700;
+    padding: 66px 48px;
+
+    > .belonging {
+      font-size: 14px;
+    }
+
+    > .name {
+      font-size: 44px;
+    }
+  }
+}
