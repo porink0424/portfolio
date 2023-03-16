@@ -1,4 +1,5 @@
 import MainVisual from "@/components/sections/MailVisual";
+import SectionAbout from "@/components/sections/SectionAbout";
 import TopHeader from "@/components/sections/TopHeader";
 import { SECTION_DOM_ID } from "@/constants/section";
 import useMainSection from "@/hooks/useMainSection";
@@ -27,61 +28,57 @@ export default function Home() {
         <MainVisual />
       </section>
 
-      <section
-        id={SECTION_DOM_ID[0]}
-        className={styles.sectionAbout}
-        ref={sectionAboutRef}
-      >
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-      </section>
+      <div className={styles.mainContainer}>
+        <section
+          id={SECTION_DOM_ID[0]}
+          className={styles.sectionAbout}
+          ref={sectionAboutRef}
+        >
+          <SectionAbout />
+        </section>
 
-      <section
-        id={SECTION_DOM_ID[1]}
-        className={styles.sectionExperiences}
-        ref={sectionExperiencesRef}
-      >
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-      </section>
+        <section
+          id={SECTION_DOM_ID[1]}
+          className={styles.sectionExperiences}
+          ref={sectionExperiencesRef}
+        >
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section>
 
-      <section
-        id={SECTION_DOM_ID[2]}
-        className={styles.sectionResearch}
-        ref={sectionResearchRef}
-      >
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-      </section>
+        <section
+          id={SECTION_DOM_ID[2]}
+          className={styles.sectionResearch}
+          ref={sectionResearchRef}
+        >
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section>
 
-      <section
-        id={SECTION_DOM_ID[3]}
-        className={styles.sectionHobby}
-        ref={sectionHobbyRef}
-      >
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-      </section>
+        <section
+          id={SECTION_DOM_ID[3]}
+          className={styles.sectionHobby}
+          ref={sectionHobbyRef}
+        >
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </section>
+      </div>
     </>
   );
 }

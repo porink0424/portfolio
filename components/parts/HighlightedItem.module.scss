@@ -1,0 +1,19 @@
+.highlightedItem {
+  position: relative;
+  margin-bottom: 24px;
+
+  > .leftborder {
+    position: absolute;
+    height: 100%;
+    border-left: 4px solid #000;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+
+  .period {
+    font-size: 12px;
+    color: #666;
+  }
+}

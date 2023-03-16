@@ -1,4 +1,10 @@
 .topHeader {
   position: sticky;
+  z-index: var(--z-index-top-header);
   top: 0;
+}
+
+.mainContainer {
+  padding: 0 64px;
+  background-color: #fff;
 }

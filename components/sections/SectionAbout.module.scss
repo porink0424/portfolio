@@ -1,0 +1,16 @@
+.sectionAbout {
+  margin-bottom: 80px;
+
+  > .line {
+    display: flex;
+    margin-bottom: 16px;
+
+    > .left {
+      margin-right: 40px;
+    }
+  }
+
+  > .links {
+    display: flex;
+  }
+}
