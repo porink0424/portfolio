@@ -1,5 +1,6 @@
 import { LANGUAGE } from "@/constants/language";
-import { Language } from "@/types/language";
+import { useLanguageContext } from "@/contexts/Language.context";
+import { LanguageKey } from "@/types/language";
 import classNames from "classnames";
 import Image from "next/image";
 import { useState } from "react";
@@ -7,8 +8,7 @@ import styles from "./LanguageSelector.module.scss";
 
 export default function LanguageSelector() {
   const [open, setOpen] = useState(false);
-  // TODO: language stateはいずれcontextにして多言語対応する
-  const [language, setLanguage] = useState<Language>(LANGUAGE.JP);
+  const { languageKey, setLanguageKey } = useLanguageContext();
 
   return (
     <>
@@ -32,18 +32,18 @@ export default function LanguageSelector() {
       <div className={styles.modalwrapper}>
         {open && (
           <div className={styles.modal}>
-            {Object.entries(LANGUAGE).map(([languageKey, languageValue]) => {
+            {Object.entries(LANGUAGE).map(([key, value]) => {
               return (
                 <div
-                  key={languageKey}
+                  key={key}
                   className={classNames(styles.item, {
-                    [styles.Selected]: language === languageValue,
+                    [styles.Selected]: languageKey === key,
                   })}
                   onClick={() => {
-                    setLanguage(languageValue);
+                    setLanguageKey(key as LanguageKey);
                   }}
                 >
-                  <p className={styles.text}>{languageValue}</p>
+                  <p className={styles.text}>{value}</p>
                 </div>
               );
             })}

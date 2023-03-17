@@ -1,10 +1,9 @@
-import { LANGUAGE } from "@/constants/language";
-import { Language } from "@/types/language";
+import { LanguageKey } from "@/types/language";
 import { createContext, useContext, useMemo, useState } from "react";
 
 type Context = {
-  language: Language;
-  setLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  languageKey: LanguageKey;
+  setLanguageKey: React.Dispatch<React.SetStateAction<LanguageKey>>;
 };
 
 export const LanguageContext = createContext<Context | undefined>(undefined);
@@ -18,14 +17,14 @@ export function useLanguageContext(): Context {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>(LANGUAGE.JP);
+  const [languageKey, setLanguageKey] = useState<LanguageKey>("JP");
 
   const value = useMemo(
     () => ({
-      language,
-      setLanguage,
+      languageKey,
+      setLanguageKey,
     }),
-    [language, setLanguage]
+    [languageKey, setLanguageKey]
   );
 
   return (
