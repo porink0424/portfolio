@@ -1,5 +1,5 @@
 .mainVisual {
-  $aspectRatio: 1/0.35;
+  $aspectRatio: 1/0.42;
 
   > .imagewrapper {
     width: 100%;
@@ -17,7 +17,7 @@
   > .content {
     width: 100%;
     aspect-ratio: $aspectRatio;
-    background: linear-gradient(to bottom, transparent, transparent 70%, #fff);
+    background: linear-gradient(to bottom, transparent, transparent 90%, #fff);
     color: #fff;
     font-weight: 700;
     padding: 0 48px;
@@ -31,7 +31,6 @@
 
     > .name {
       font-size: 44px;
-      padding-bottom: 40px;
     }
   }
 }

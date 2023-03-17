@@ -1,7 +1,10 @@
 .topHeader {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   z-index: var(--z-index-top-header);
   top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .mainContainer {
