@@ -1,5 +1,6 @@
 import MainVisual from "@/components/sections/MailVisual";
 import SectionAbout from "@/components/sections/SectionAbout";
+import SectionExperiences from "@/components/sections/SectionExperiences";
 import TopHeader from "@/components/sections/TopHeader";
 import { SECTION_DOM_ID } from "@/constants/section";
 import useMainSection from "@/hooks/useMainSection";
@@ -42,13 +43,7 @@ export default function Home() {
           className={styles.sectionExperiences}
           ref={sectionExperiencesRef}
         >
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <SectionExperiences />
         </section>
 
         <section
