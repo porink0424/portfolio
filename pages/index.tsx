@@ -1,6 +1,7 @@
 import MainVisual from "@/components/sections/MailVisual";
 import SectionAbout from "@/components/sections/SectionAbout";
 import SectionExperiences from "@/components/sections/SectionExperiences";
+import SectionResearch from "@/components/sections/SectionResearch";
 import TopHeader from "@/components/sections/TopHeader";
 import { SECTION_DOM_ID } from "@/constants/section";
 import useMainSection from "@/hooks/useMainSection";
@@ -51,13 +52,7 @@ export default function Home() {
           className={styles.sectionResearch}
           ref={sectionResearchRef}
         >
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
-          <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <SectionResearch />
         </section>
 
         <section

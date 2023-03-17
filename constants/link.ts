@@ -7,4 +7,8 @@ export const LINK = {
   PYTRIS: "https://github.com/porinky0424/py-tris",
   REVERSI: "https://github.com/porinky0424/reversi",
   PYCAML: "https://github.com/porinky0424/pycaml",
+  PAPER: {
+    NLP2023:
+      "https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P9-5.pdf",
+  },
 };
