@@ -1,3 +1,4 @@
+import BottomFooter from "@/components/sections/BottomFooter";
 import MainVisual from "@/components/sections/MailVisual";
 import SectionAbout from "@/components/sections/SectionAbout";
 import SectionExperiences from "@/components/sections/SectionExperiences";
@@ -64,6 +65,10 @@ export default function Home() {
           <SectionHobby />
         </section>
       </div>
+
+      <section className={styles.bottomFooter}>
+        <BottomFooter />
+      </section>
     </>
   );
 }

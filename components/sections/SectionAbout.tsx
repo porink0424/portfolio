@@ -30,9 +30,7 @@ export default function SectionAbout() {
         <p className={styles.left}>専攻</p>
         <p className={styles.right}>東京大学理学部情報科学科4年</p>
       </div>
-      <div
-        className={classNames(styles.links, "_contentMarginLeft", styles.Flex)}
-      >
+      <div className={classNames(styles.links, "_contentMarginLeft")}>
         <LinkIcon src="/github-mark.png" href={LINK.GITHUB} />
         <LinkIcon src="/qiita.png" href={LINK.QIITA} />
         <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
