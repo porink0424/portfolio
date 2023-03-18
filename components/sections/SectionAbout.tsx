@@ -1,5 +1,5 @@
 import { LINK } from "@/constants/link";
-import useDatum from "@/hooks/useDatum";
+import useSelectData from "@/hooks/useSelectData";
 import classNames from "classnames";
 import HighlightedItem from "../parts/HighlightedItem";
 import LinkIcon from "../parts/LinkIcon";
@@ -73,7 +73,7 @@ const data = {
 } as const;
 
 export default function SectionAbout() {
-  const { datum } = useDatum(data);
+  const { selectedData } = useSelectData(data);
 
   return (
     <div className={styles.sectionAbout}>
@@ -83,20 +83,20 @@ export default function SectionAbout() {
       <div
         className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
       >
-        <p className={styles.left}>{datum.text[0]}</p>
-        <p className={styles.right}>{datum.text[1]}</p>
+        <p className={styles.left}>{selectedData.text[0]}</p>
+        <p className={styles.right}>{selectedData.text[1]}</p>
       </div>
       <div
         className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
       >
-        <p className={styles.left}>{datum.text[2]}</p>
-        <p className={styles.right}>{datum.text[3]}</p>
+        <p className={styles.left}>{selectedData.text[2]}</p>
+        <p className={styles.right}>{selectedData.text[3]}</p>
       </div>
       <div
         className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
       >
-        <p className={styles.left}>{datum.text[4]}</p>
-        <p className={styles.right}>{datum.text[5]}</p>
+        <p className={styles.left}>{selectedData.text[4]}</p>
+        <p className={styles.right}>{selectedData.text[5]}</p>
       </div>
       <div className={classNames(styles.links, "_contentMarginLeft")}>
         <LinkIcon src="/github-mark.png" href={LINK.GITHUB} />
@@ -105,7 +105,7 @@ export default function SectionAbout() {
       </div>
 
       <TitleH2 title="History" />
-      {datum.history.map(
+      {selectedData.history.map(
         (
           iter: {
             title: string;
@@ -125,7 +125,7 @@ export default function SectionAbout() {
 
       <TitleH2 title="Skills" />
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[6]}</p>
+        <p>{selectedData.text[6]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>・TypeScript & React, Vue.js, Next.js</p>
@@ -135,7 +135,7 @@ export default function SectionAbout() {
       </div>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[7]}</p>
+        <p>{selectedData.text[7]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>・Python & PyTorch</p>
@@ -143,7 +143,7 @@ export default function SectionAbout() {
       </div>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[8]}</p>
+        <p>{selectedData.text[8]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>・Rust</p>
@@ -152,11 +152,11 @@ export default function SectionAbout() {
       </div>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[9]}</p>
+        <p>{selectedData.text[9]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>・TOEFL: 92</p>
-        <p>・{datum.text[10]}</p>
+        <p>・{selectedData.text[10]}</p>
       </div>
     </div>
   );

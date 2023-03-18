@@ -1,5 +1,5 @@
 import { LINK } from "@/constants/link";
-import useDatum from "@/hooks/useDatum";
+import useSelectData from "@/hooks/useSelectData";
 import { ReactNode } from "react";
 import HighlightedItem from "../parts/HighlightedItem";
 import ImageItem from "../parts/ImageItem";
@@ -283,14 +283,14 @@ const data = {
 } as const;
 
 export default function SectionExperiences() {
-  const { datum } = useDatum(data);
+  const { selectedData } = useSelectData(data);
 
   return (
     <div className={styles.sectionExperiences}>
       <TitleH1 title="Experiences" />
 
       <div className={styles.images}>
-        {datum.images.map(
+        {selectedData.images.map(
           (
             iter: {
               imageSrc: string;
@@ -316,7 +316,7 @@ export default function SectionExperiences() {
       </div>
 
       <TitleH2 title="Internship" />
-      {datum.internship.map(
+      {selectedData.internship.map(
         (
           iter: {
             title: string;
@@ -338,7 +338,7 @@ export default function SectionExperiences() {
       )}
 
       <TitleH2 title="Personal Projects" />
-      {datum.personal.map(
+      {selectedData.personal.map(
         (
           iter: {
             title: string;
@@ -355,7 +355,7 @@ export default function SectionExperiences() {
       )}
 
       <TitleH2 title="Educational Projects" />
-      {datum.educational.map(
+      {selectedData.educational.map(
         (
           iter: {
             title: string;

@@ -1,5 +1,5 @@
 import { LINK } from "@/constants/link";
-import useDatum from "@/hooks/useDatum";
+import useSelectData from "@/hooks/useSelectData";
 import classNames from "classnames";
 import TitleH1 from "../parts/TitleH1";
 import TitleH2 from "../parts/TitleH2";
@@ -27,7 +27,7 @@ const data = {
 } as const;
 
 export default function SectionResearch() {
-  const { datum } = useDatum(data);
+  const { selectedData } = useSelectData(data);
 
   return (
     <div className={styles.sectionResearch}>
@@ -35,15 +35,15 @@ export default function SectionResearch() {
 
       <TitleH2 title="Interest" />
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p className={styles.h3}>{datum.text[0]}</p>
+        <p className={styles.h3}>{selectedData.text[0]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[1]}</p>
-        <p>{datum.text[2]}</p>
+        <p>{selectedData.text[1]}</p>
+        <p>{selectedData.text[2]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[3]}</p>
-        <p>{datum.text[4]}</p>
+        <p>{selectedData.text[3]}</p>
+        <p>{selectedData.text[4]}</p>
       </div>
 
       <TitleH2 title="Publications" />

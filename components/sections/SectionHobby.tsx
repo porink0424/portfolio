@@ -1,4 +1,4 @@
-import useDatum from "@/hooks/useDatum";
+import useSelectData from "@/hooks/useSelectData";
 import classNames from "classnames";
 import TitleH1 from "../parts/TitleH1";
 import styles from "./SectionHobby.module.scss";
@@ -23,17 +23,17 @@ const data = {
 } as const;
 
 export default function SectionHobby() {
-  const { datum } = useDatum(data);
+  const { selectedData } = useSelectData(data);
 
   return (
     <div className={styles.sectionHobby}>
       <TitleH1 title="Hobby" />
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>{datum.text[0]}</p>
-        <p>{datum.text[1]}</p>
-        <p>{datum.text[2]}</p>
-        <p>{datum.text[3]}</p>
+        <p>{selectedData.text[0]}</p>
+        <p>{selectedData.text[1]}</p>
+        <p>{selectedData.text[2]}</p>
+        <p>{selectedData.text[3]}</p>
       </div>
     </div>
   );
