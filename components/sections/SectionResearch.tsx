@@ -1,31 +1,49 @@
 import { LINK } from "@/constants/link";
+import useDatum from "@/hooks/useDatum";
 import classNames from "classnames";
 import TitleH1 from "../parts/TitleH1";
 import TitleH2 from "../parts/TitleH2";
 import styles from "./SectionResearch.module.scss";
 
+const data = {
+  JP: {
+    text: [
+      "創発言語",
+      "ニューラルネットワークで構成されたエージェント同士に会話させ、",
+      "人工的に発生させた言語を解析する「創発言語」の分野を研究しています。",
+      "人間の脳の構造を模倣したエージェントを使って、「創発言語」の中に、",
+      "自然言語の文法構造のようなものを創発させられないか、構想しています。",
+    ],
+  },
+  EN: {
+    text: [
+      "創発言語",
+      "ニューラルネットワークで構成されたエージェント同士に会話させ、",
+      "人工的に発生させた言語を解析する「創発言語」の分野を研究しています。",
+      "人間の脳の構造を模倣したエージェントを使って、「創発言語」の中に、",
+      "自然言語の文法構造のようなものを創発させられないか、構想しています。",
+    ],
+  },
+} as const;
+
 export default function SectionResearch() {
+  const { datum } = useDatum(data);
+
   return (
     <div className={styles.sectionResearch}>
       <TitleH1 title="Research" />
 
       <TitleH2 title="Interest" />
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p className={styles.h3}>創発言語</p>
+        <p className={styles.h3}>{datum.text[0]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>ニューラルネットワークで構成されたエージェント同士に会話させ、</p>
-        <p>
-          人工的に発生させた言語を解析する「創発言語」の分野を研究しています。
-        </p>
+        <p>{datum.text[1]}</p>
+        <p>{datum.text[2]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>
-          人間の脳の構造を模倣したエージェントを使って、「創発言語」の中に、
-        </p>
-        <p>
-          自然言語の文法構造のようなものを創発させられないか、構想しています。
-        </p>
+        <p>{datum.text[3]}</p>
+        <p>{datum.text[4]}</p>
       </div>
 
       <TitleH2 title="Publications" />
