@@ -31,41 +31,56 @@ const data = {
         },
       },
       {
-        title: "宮城県　仙台第二高等学校",
+        title: "東京大学　理学部情報科学科",
         period: {
-          start: "2016/04",
-          end: "2019/03",
+          start: "2019/04",
+          end: "2023/03",
+        },
+      },
+      {
+        title: "東京大学大学院　情報理工学系研究科コンピュータ科学専攻",
+        period: {
+          start: "2023/04",
+          end: "",
         },
       },
     ],
   },
   EN: {
     text: [
-      "Name",
+      "Name :",
       "Daichi KATO (加藤 大地)",
-      "所属",
-      "東京大学理学部情報科学科4年",
-      "専攻",
-      "自然言語処理",
-      "Webエンジニアとして",
-      "研究、機械学習、競プロ、趣味の開発で",
-      "低レイヤーな実装、処理速度が求められる環境で",
-      "その他",
-      "応用情報技術者試験 取得予定",
+      "Affiliation :",
+      "Department of Information Science, The University of Tokyo, B4",
+      "Major :",
+      "NLP (Natural Language Processing)",
+      "As a Web engineer :",
+      "In research, ML, competitive programming, and hobby developmen :",
+      "In environments that require low-layer implementation and processing speed :",
+      "Others :",
+      "Applied Information Technology Engineer Examination (応用情報技術者試験) Expected to be acquired",
     ],
     history: [
       {
-        title: "宮城県　仙台第二高等学校",
+        title: "Sendai Daini High School, Miyagi",
         period: {
           start: "2016/04",
           end: "2019/03",
         },
       },
       {
-        title: "宮城県　仙台第二高等学校",
+        title: "Department of Information Science, The University of Tokyo",
         period: {
-          start: "2016/04",
-          end: "2019/03",
+          start: "2019/04",
+          end: "2023/03",
+        },
+      },
+      {
+        title:
+          "Department of Computer Science, Graduate School of Information Science and Technology, The University of Tokyo",
+        period: {
+          start: "2023/04",
+          end: "",
         },
       },
     ],
@@ -155,7 +170,7 @@ export default function SectionAbout() {
         <p>{selectedData.text[9]}</p>
       </div>
       <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>・TOEFL: 92</p>
+        <p>・TOEFL : 92</p>
         <p>・{selectedData.text[10]}</p>
       </div>
     </div>
