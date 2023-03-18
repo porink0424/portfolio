@@ -13,7 +13,9 @@ export default function TopHeader() {
 
   return (
     <div className={styles.topHeader}>
-      <p className={styles.name}>Daichi KATO</p>
+      <Link className={styles.name} href="#">
+        Daichi KATO
+      </Link>
       <div className={styles.sectionItems}>
         <div className={styles.bar} ref={barRef} />
         <div className={styles.wrapper} ref={itemsWrapperRef}>
