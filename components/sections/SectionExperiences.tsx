@@ -148,44 +148,44 @@ const data = {
     images: [
       {
         imageSrc: "/metalife.png",
-        title: "2Dコミュニケーションツール「MetaLife」",
+        title: "2D Communication Tool ''MetaLife''",
         content:
-          "構想、要件定義、設計、実装、保守全てのフェーズに参加しています。",
+          "I have been involved in all phases of the project, including conceptualization, requirements definition, design, implementation, and maintenance.",
         href: LINK.METALIFE,
       },
       {
         imageSrc: "/manabitimes.png",
-        title: "Webメディア「資格Times」「学びTimes」",
+        title: "Web Media ''Shikaku Times'' ''Manabi Times''",
         content:
-          "メディアサイトのみならず、CMSのフロント・バック両方の実装&保守を行なっています。",
+          "I am responsible for both front and back-end implementation and maintenance of not only the Web site itself, but also the CMS.",
         href: LINK.MANABITIMES,
       },
       {
         imageSrc: "/pytris.png",
-        title: "Pythonで動くぷよぷよテトリスAI「py-tris」",
+        title: "PuyoPuyo Tetris AI Scratched in Python ''py-tris''",
         content:
-          "OSのAPI等も駆使しつつ、実機上で実際に動くAIなので、人間と対戦することもできます。",
+          "Utilizing OS APIs and other tools, this AI runs on the actual application. It is also capable of playing against humans in the application.",
         href: LINK.PYTRIS,
         long: true,
       },
       {
         imageSrc: "/reversi.png",
-        title: "Rustで動くリバーシAI",
+        title: "Reversi AI Scratched in Rust",
         content:
-          "マルチスレッドな実装を生かし、最終盤では全探索を行います。そこそこ強いです。",
+          "Thanks to a multithreaded implementation, it performs a complete search in the endgame. Reasonably strong.",
         href: LINK.REVERSI,
       },
       {
         imageSrc: "/pycaml.png",
-        title: "OCamlサブセット言語用コンパイラ「pycaml」",
+        title: "Compiler for the Subset of OCaml ''pycaml''",
         content:
-          "プログラム言語理論に基づく最適化も実装された、PythonとOCamlによるコンパイラです。",
+          "This compiler, built using Python and OCaml, incorporates optimizations based on programming language theory.",
         href: LINK.PYCAML,
       },
     ],
     internship: [
       {
-        title: "株式会社ベンド　フルスタックエンジニア",
+        title: "Full Stack Engineer at Bend Inc.",
         period: {
           start: "2020/12",
           end: "Present",
@@ -193,17 +193,23 @@ const data = {
         children: (
           <>
             <p>
-              フロントエンドを中心に、バックエンド・サーバー等広く業務に携わっています。
+              My primary focus is on front-end development, but I am also deeply
+              involved in a wide range of tasks, including back-end and server
+              management.
             </p>
             <p>
-              ・ゲームライクな2DコミュニケーションWebアプリ「MetaLife」の開発
+              ・Development of the game-like 2D communication web app,
+              &apos;&apos;MetaLife&apos;&apos;
             </p>
-            <p>・「資格Times」「学びTimes」の運用</p>
+            <p>
+              ・Running &apos;&apos;Shikaku Times&apos;&apos;,
+              &apos;&apos;Manabi Times&apos;&apos;
+            </p>
           </>
         ),
       },
       {
-        title: "チームラボ株式会社　フロントエンドエンジニア",
+        title: "Front-End Engineer at teamLab",
         period: {
           start: "2023/02",
           end: "2023/03",
@@ -211,70 +217,71 @@ const data = {
         children: (
           <>
             <p>
-              2週間の短期インターンに参加し、フロントエンドサイドの開発チームに参加して、実務に取り組みました。
+              I participated in a two-week short-term internship and joined the
+              front-end development team to work on practical tasks.
             </p>
-            <p>・Webサイトのシステムリプレース</p>
-            <p>・内部・外部のミーティング参加</p>
-            <p>・新規アプリのWebView実装</p>
+            <p>・System replacement of a web site</p>
+            <p>・Participation in both internal and external meetings</p>
+            <p>・Webview implementation for a new app</p>
           </>
         ),
       },
     ],
     personal: [
       {
-        title: "ぷよぷよテトリスAI",
+        title: "Puyopuyo Tetris AI",
         children: (
           <>
             <p>
-              大学の同期と、ゲームソフト「ぷよぷよテトリス」内で動く、AIを作成しました。
+              I created an AI that runs in the &apos;&apos;Puyopuyo
+              Tetris&apos;&apos; game with my university classmates.
             </p>
             <p>
-              メモリ読み込みによる情報抽出
+              It works as follows:
               <br />
-              →ルールベースのアルゴリズムによる動きの決定
+              Information extraction by reading memory
               <br />
-              →仮想コントローラーから入力
-              <br />
-              という流れで動きます。
+              → Movement decision by rule-based algorithm
+              <br />→ Input via a virtual controller
             </p>
           </>
         ),
       },
       {
-        title: "リバーシAI",
+        title: "Reversi AI",
         children: (
           <>
-            <p>マルチスレッドで動くリバーシの対戦用AIを作成しました。</p>
-            <p>CUIだけでは寂しかったので、簡易的なGUIも追加しました。</p>
-            <p>ReplitでDEMOをいじれます。</p>
+            <p>I created a multithreaded AI for Reversi.</p>
+            <p>I also added a simple GUI since CUI alone was boring.</p>
+            <p>You can play the DEMO in Replit.</p>
           </>
         ),
       },
       {
-        title: "C言語のサブセット用のミニコンパイラ (WIP)",
+        title: "Mini-Compiler for the subset language of C-lang (WIP)",
         children: (
           <>
-            <p>Rui Ueyamaさんの記事に沿って、</p>
+            <p>Along with the Rui Ueyama&apos;s article,</p>
             <p>
-              C言語のサブセット言語をRISC-Vベースのアセンブリにコンパイルするコンパイラを、
+              I am in the process of implementing a compiler in Rust that
+              compiles a subset language of C-lang into a RISC-V based assembly.
             </p>
-            <p>Rustで実装中です。</p>
           </>
         ),
       },
     ],
     educational: [
       {
-        title: "OCamlのサブセット用のコンパイラ",
+        title: "Compiler for the subset language of OCaml",
         children: (
           <>
             <p>
-              チーム4人で課題プログラムを動かすCPUアーキテクチャを作る「CPU実験」の中で、
+              In the &apos;&apos;CPU Experiment&apos;&apos;, in which a team of
+              four people create a CPU architecture to run a given program, in
+              my role as a developer of a compiler, I built a compiler for the
+              subset language of OCaml.
             </p>
-            <p>
-              コンパイラ係として、OCamlのサブセット言語のコンパイラを作成しました。
-            </p>
-            <p>PythonとOCamlで実装しました。</p>
+            <p>I implemented this in Python and OCaml.</p>
           </>
         ),
       },
