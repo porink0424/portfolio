@@ -14,15 +14,57 @@ export default class Main extends Phaser.Scene {
 
   private character!: Phaser.GameObjects.Sprite;
   private chest!: Phaser.GameObjects.Image;
+  private tiles!: Phaser.GameObjects.Group;
   private moveInfo: { targetY: number } | null = null;
+
+  // mainContainerの大きさに合わせた数のタイルを作成する
+  makeTiles = () => {
+    this.tiles = this.add.group();
+    const mainContainerHeight = document
+      .getElementById("mainContainer")!
+      .getBoundingClientRect().height;
+    const rowCount = Math.floor(mainContainerHeight / CELL_SIZE);
+    this.tiles.add(
+      this.add.image(CELL_SIZE, CELL_SIZE / 2, SPRITE_KEY.MAP_TIP_TOP)
+    );
+    for (let index = 1; index < rowCount - 1; index++) {
+      this.tiles.add(
+        this.add.image(
+          CELL_SIZE,
+          CELL_SIZE / 2 + CELL_SIZE * index,
+          SPRITE_KEY.MAP_TIP_CENTER
+        )
+      );
+    }
+    this.tiles.add(
+      this.add.image(
+        CELL_SIZE,
+        CELL_SIZE / 2 + CELL_SIZE * (rowCount - 1),
+        SPRITE_KEY.MAP_TIP_BOTTOM
+      )
+    );
+  };
+
+  // 全てのタイルを破壊する
+  destroyTiles = () => {
+    this.tiles?.destroy(true, true);
+  };
 
   constructor() {
     super({ key: "Main", active: true });
 
-    // mainVisualの分 + 調整
+    // mainVisualの分 + 調整分、カメラの位置をずらすことで、canvasがmainContainerと同じ部分からスタートしているように見せる
     this.cameraMarginTop =
       document.getElementById("mainVisual")!.getBoundingClientRect().height -
       48;
+
+    window.addEventListener("resize", () => {
+      this.destroyTiles();
+      this.makeTiles();
+      this.cameraMarginTop =
+        document.getElementById("mainVisual")!.getBoundingClientRect().height -
+        48;
+    });
   }
 
   preload = () => {
@@ -73,9 +115,16 @@ export default class Main extends Phaser.Scene {
     });
 
     const characterTargetY = () => {
+      const mainContainerHeight = document
+        .getElementById("mainContainer")!
+        .getBoundingClientRect().height;
       const ret =
         window.scrollY + window.innerHeight / 2 - this.cameraMarginTop;
-      return ret < 0 ? 0 : ret;
+      return ret < CELL_SIZE
+        ? CELL_SIZE
+        : ret > mainContainerHeight - CELL_SIZE
+        ? mainContainerHeight - CELL_SIZE
+        : ret;
     };
     this.character = this.add
       .sprite(CELL_SIZE, characterTargetY(), SPRITE_KEY.CHARACTER)
@@ -86,7 +135,7 @@ export default class Main extends Phaser.Scene {
     window.addEventListener(
       "scroll",
       () => {
-        // 宝箱はスクロールに合わせて直ちに移動する。キャラクターはそれを追跡する。
+        // 宝箱はスクロールに合わせて直ちに移動する。キャラクターはそれを線形に追跡する。
         this.moveInfo = { targetY: characterTargetY() };
         this.chest.setY(characterTargetY());
       },
@@ -102,26 +151,11 @@ export default class Main extends Phaser.Scene {
       { passive: true }
     );
 
-    const mainContainerHeight = document
-      .getElementById("mainContainer")!
-      .getBoundingClientRect().height;
-    const rowCount = Math.floor(mainContainerHeight / CELL_SIZE);
-    this.add.image(CELL_SIZE, CELL_SIZE / 2, SPRITE_KEY.MAP_TIP_TOP);
-    for (let index = 1; index < rowCount - 1; index++) {
-      this.add.image(
-        CELL_SIZE,
-        CELL_SIZE / 2 + CELL_SIZE * index,
-        SPRITE_KEY.MAP_TIP_CENTER
-      );
-    }
-    this.add.image(
-      CELL_SIZE,
-      CELL_SIZE / 2 + CELL_SIZE * (rowCount - 1),
-      SPRITE_KEY.MAP_TIP_BOTTOM
-    );
+    this.makeTiles();
 
     this.character.play(`${SPRITE_KEY.CHARACTER}-idle-down`, true);
 
+    // 全てのロードが終わったタイミングでcanvasを表示する
     document.getElementById("canvas")!.style.opacity = "1";
   };
 
