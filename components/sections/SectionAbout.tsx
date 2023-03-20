@@ -142,37 +142,37 @@ export default function SectionAbout() {
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>{selectedData.text[6]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>・TypeScript & React, Vue.js, Next.js</p>
-        <p>・HTML/CSS, PHP & Laravel</p>
-        <p>・AWS, GCP</p>
-        <p>・Three.js & React Three Fiber, Phaser</p>
-      </div>
+      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+        <li>TypeScript & React, Vue.js, Next.js</li>
+        <li>HTML/CSS, PHP & Laravel</li>
+        <li>AWS, GCP</li>
+        <li>Three.js & React Three Fiber, Phaser</li>
+      </ul>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>{selectedData.text[7]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>・Python & PyTorch</p>
-        <p>・Unity (with C#)</p>
-      </div>
+      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+        <li>Python & PyTorch</li>
+        <li>Unity (with C#)</li>
+      </ul>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>{selectedData.text[8]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>・Rust</p>
-        <p>・C, C++</p>
-        <p>・OCaml</p>
-      </div>
+      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+        <li>Rust</li>
+        <li>C, C++</li>
+        <li>OCaml</li>
+      </ul>
 
       <div className={classNames(styles.line, "_contentMarginLeft")}>
         <p>{selectedData.text[9]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
-        <p>・TOEFL : 92</p>
-        <p>・{selectedData.text[10]}</p>
-      </div>
+      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+        <li>TOEFL : 92</li>
+        <li>{selectedData.text[10]}</li>
+      </ul>
     </div>
   );
 }

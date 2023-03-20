@@ -4,6 +4,7 @@ import "modern-css-reset";
 import type { AppProps } from "next/app";
 import "@/styles/zIndex.scss";
 import "@/styles/helper.scss";
+import "@/styles/global.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

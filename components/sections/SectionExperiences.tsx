@@ -59,10 +59,12 @@ const data = {
             <p>
               フロントエンドを中心に、バックエンド・サーバー等広く業務に携わっています。
             </p>
-            <p>
-              ・ゲームライクな2DコミュニケーションWebアプリ「MetaLife」の開発
-            </p>
-            <p>・「資格Times」「学びTimes」の運用</p>
+            <ul>
+              <li>
+                ゲームライクな2DコミュニケーションWebアプリ「MetaLife」の開発
+              </li>
+              <li>「資格Times」「学びTimes」の運用</li>
+            </ul>
           </>
         ),
       },
@@ -77,9 +79,11 @@ const data = {
             <p>
               2週間の短期インターンに参加し、フロントエンドサイドの開発チームに参加して、実務に取り組みました。
             </p>
-            <p>・Webサイトのシステムリプレース</p>
-            <p>・内部・外部のミーティング参加</p>
-            <p>・新規アプリのWebView実装</p>
+            <ul>
+              <li>Webサイトのシステムリプレース</li>
+              <li>内部・外部のミーティング参加</li>
+              <li>新規アプリのWebView実装</li>
+            </ul>
           </>
         ),
       },
@@ -197,14 +201,16 @@ const data = {
               involved in a wide range of tasks, including back-end and server
               management.
             </p>
-            <p>
-              ・Development of the game-like 2D communication web app,
-              &apos;&apos;MetaLife&apos;&apos;
-            </p>
-            <p>
-              ・Running &apos;&apos;Shikaku Times&apos;&apos;,
-              &apos;&apos;Manabi Times&apos;&apos;
-            </p>
+            <ul>
+              <li>
+                Development of the game-like 2D communication web app,
+                &apos;&apos;MetaLife&apos;&apos;
+              </li>
+              <li>
+                Running &apos;&apos;Shikaku Times&apos;&apos;,
+                &apos;&apos;Manabi Times&apos;&apos;
+              </li>
+            </ul>
           </>
         ),
       },
@@ -220,9 +226,11 @@ const data = {
               I participated in a two-week short-term internship and joined the
               front-end development team to work on practical tasks.
             </p>
-            <p>・System replacement of a web site</p>
-            <p>・Participation in both internal and external meetings</p>
-            <p>・Webview implementation for a new app</p>
+            <ul>
+              <li>System replacement of a web site</li>
+              <li>Participation in both internal and external meetings</li>
+              <li>Webview implementation for a new app</li>
+            </ul>
           </>
         ),
       },
