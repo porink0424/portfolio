@@ -1,0 +1,153 @@
+export const CELL_SIZE = 32;
+const SPRITE_KEY = {
+  MAP_TIP_TOP: "maptiptop",
+  MAP_TIP_CENTER: "maptipcenter",
+  MAP_TIP_BOTTOM: "maptipbottom",
+  CHEST: "maptipchest",
+  CHARACTER: "character",
+};
+const SPEED = 3;
+
+export default class Main extends Phaser.Scene {
+  // mainVisualの分は余白を開けたい
+  private cameraMarginTop!: number;
+
+  private character!: Phaser.GameObjects.Sprite;
+  private chest!: Phaser.GameObjects.Image;
+  private moveInfo: { targetY: number } | null = null;
+
+  constructor() {
+    super({ key: "Main", active: true });
+
+    // mainVisualの分 + 調整
+    this.cameraMarginTop =
+      document.getElementById("mainVisual")!.getBoundingClientRect().height -
+      48;
+  }
+
+  preload = () => {
+    this.load.image(SPRITE_KEY.MAP_TIP_TOP, "/phaser/top.png");
+    this.load.image(SPRITE_KEY.MAP_TIP_CENTER, "/phaser/center.png");
+    this.load.image(SPRITE_KEY.MAP_TIP_BOTTOM, "/phaser/bottom.png");
+    this.load.image(SPRITE_KEY.CHEST, "/phaser/chest.png");
+    this.load.spritesheet(SPRITE_KEY.CHARACTER, "/phaser/character.png", {
+      frameWidth: CELL_SIZE,
+      frameHeight: CELL_SIZE,
+    });
+  };
+
+  create = () => {
+    this.anims.create({
+      key: `${SPRITE_KEY.CHARACTER}-walk-down`,
+      frames: [
+        { key: SPRITE_KEY.CHARACTER, frame: 0 },
+        { key: SPRITE_KEY.CHARACTER, frame: 1 },
+        { key: SPRITE_KEY.CHARACTER, frame: 2 },
+        { key: SPRITE_KEY.CHARACTER, frame: 1 },
+      ],
+      frameRate: 7,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: `${SPRITE_KEY.CHARACTER}-walk-up`,
+      frames: [
+        { key: SPRITE_KEY.CHARACTER, frame: 9 },
+        { key: SPRITE_KEY.CHARACTER, frame: 10 },
+        { key: SPRITE_KEY.CHARACTER, frame: 11 },
+        { key: SPRITE_KEY.CHARACTER, frame: 10 },
+      ],
+      frameRate: 7,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: `${SPRITE_KEY.CHARACTER}-idle-down`,
+      frames: [{ key: SPRITE_KEY.CHARACTER, frame: 1 }],
+      frameRate: 0,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: `${SPRITE_KEY.CHARACTER}-idle-up`,
+      frames: [{ key: SPRITE_KEY.CHARACTER, frame: 10 }],
+      frameRate: 0,
+      repeat: -1,
+    });
+
+    const characterTargetY = () => {
+      const ret =
+        window.scrollY + window.innerHeight / 2 - this.cameraMarginTop;
+      return ret < 0 ? 0 : ret;
+    };
+    this.character = this.add
+      .sprite(CELL_SIZE, characterTargetY(), SPRITE_KEY.CHARACTER)
+      .setDepth(2);
+    this.chest = this.add
+      .image(CELL_SIZE, characterTargetY(), SPRITE_KEY.CHEST)
+      .setDepth(1);
+    window.addEventListener(
+      "scroll",
+      () => {
+        // 宝箱はスクロールに合わせて直ちに移動する。キャラクターはそれを追跡する。
+        this.moveInfo = { targetY: characterTargetY() };
+        this.chest.setY(characterTargetY());
+      },
+      { passive: true }
+    );
+
+    this.cameras.main.scrollY = window.scrollY - this.cameraMarginTop;
+    window.addEventListener(
+      "scroll",
+      () => {
+        this.cameras.main.scrollY = window.scrollY - this.cameraMarginTop;
+      },
+      { passive: true }
+    );
+
+    const mainContainerHeight = document
+      .getElementById("mainContainer")!
+      .getBoundingClientRect().height;
+    const rowCount = Math.floor(mainContainerHeight / CELL_SIZE);
+    this.add.image(CELL_SIZE, CELL_SIZE / 2, SPRITE_KEY.MAP_TIP_TOP);
+    for (let index = 1; index < rowCount - 1; index++) {
+      this.add.image(
+        CELL_SIZE,
+        CELL_SIZE / 2 + CELL_SIZE * index,
+        SPRITE_KEY.MAP_TIP_CENTER
+      );
+    }
+    this.add.image(
+      CELL_SIZE,
+      CELL_SIZE / 2 + CELL_SIZE * (rowCount - 1),
+      SPRITE_KEY.MAP_TIP_BOTTOM
+    );
+
+    this.character.play(`${SPRITE_KEY.CHARACTER}-idle-down`, true);
+
+    document.getElementById("canvas")!.style.opacity = "1";
+  };
+
+  update = () => {
+    if (this.moveInfo) {
+      let hasReached = false;
+      if (this.character.y < this.moveInfo.targetY) {
+        this.character.y += SPEED;
+        this.character.play(`${SPRITE_KEY.CHARACTER}-walk-down`, true);
+        if (this.character.y >= this.moveInfo.targetY) {
+          this.character.y = this.moveInfo.targetY;
+          hasReached = true;
+          this.character.play(`${SPRITE_KEY.CHARACTER}-idle-down`, true);
+        }
+      } else if (this.character.y > this.moveInfo.targetY) {
+        this.character.y -= SPEED;
+        this.character.play(`${SPRITE_KEY.CHARACTER}-walk-up`, true);
+        if (this.character.y <= this.moveInfo.targetY) {
+          this.character.y = this.moveInfo.targetY;
+          hasReached = true;
+          this.character.play(`${SPRITE_KEY.CHARACTER}-idle-up`, true);
+        }
+      }
+      if (hasReached) {
+        this.moveInfo = null;
+      }
+    }
+  };
+}

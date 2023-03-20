@@ -7,8 +7,10 @@ import SectionResearch from "@/components/sections/SectionResearch";
 import TopHeader from "@/components/sections/TopHeader";
 import { SECTION_DOM_ID } from "@/constants/section";
 import useMainSection from "@/hooks/useMainSection";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
 import styles from "./index.module.scss";
+const Canvas = dynamic(() => import("@/phaser/Canvas"), { ssr: false });
 
 export default function Home() {
   const sectionAboutRef = useRef(null);
@@ -28,11 +30,11 @@ export default function Home() {
         <TopHeader />
       </section>
 
-      <section className={styles.mainVisual}>
+      <section id="mainVisual" className={styles.mainVisual}>
         <MainVisual />
       </section>
 
-      <div className={styles.mainContainer}>
+      <div id="mainContainer" className={styles.mainContainer}>
         <section
           id={SECTION_DOM_ID[0]}
           className={styles.sectionAbout}
@@ -69,6 +71,10 @@ export default function Home() {
       <section className={styles.bottomFooter}>
         <BottomFooter />
       </section>
+
+      <div id="canvas" className={styles.canvasWrapper}>
+        <Canvas />
+      </div>
     </>
   );
 }

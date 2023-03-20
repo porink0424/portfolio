@@ -8,6 +8,15 @@
 }
 
 .mainContainer {
-  padding: 0 10%;
+  padding: 0 10% 0 5%;
   background-color: #fff;
+}
+
+.canvasWrapper {
+  position: fixed;
+  top: 0;
+  left: 90%;
+  transform: translateX(calc((10% - 64px) / 2)); // 右のpaddingの中で中央に配置
+  opacity: 0;
+  transition: opacity 1s;
 }
