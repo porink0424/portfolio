@@ -1,13 +1,12 @@
+@import "@/styles/mixin.scss";
+
 .mainVisual {
-  $aspectRatio: 1/0.42;
-
-  @media screen and (max-width: 768px) {
-    $aspectRatio: 1/0.6;
-  }
-
   > .imagewrapper {
     width: 100%;
-    aspect-ratio: $aspectRatio;
+    aspect-ratio: 1/0.42;
+    @include tab {
+      aspect-ratio: 1/0.9;
+    }
     position: fixed;
     z-index: var(--z-index-main-visual);
 
@@ -20,11 +19,14 @@
 
   > .content {
     width: 100%;
-    aspect-ratio: $aspectRatio;
+    aspect-ratio: 1/0.42;
+    @include tab {
+      aspect-ratio: 1/0.9;
+    }
     background: linear-gradient(to bottom, transparent, transparent 90%, #fff);
     color: #fff;
     font-weight: 700;
-    padding: 0 48px;
+    padding-left: 48px;
     display: flex;
     flex-flow: column;
     justify-content: center;

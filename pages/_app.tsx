@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import "@/styles/zIndex.scss";
 import "@/styles/helper.scss";
 import "@/styles/global.scss";
+import "@/styles/mixin.scss";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

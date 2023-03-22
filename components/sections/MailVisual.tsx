@@ -1,14 +1,17 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import Image from "next/image";
 import styles from "./MainVisual.module.scss";
 
 export default function MainVisual() {
+  const { smallerThanTablet } = useWindowSize();
+
   return (
     <>
       <div className={styles.mainVisual}>
         <div className={styles.imagewrapper}>
           <div className={styles.image}>
             <Image
-              src="/mainVisual.png"
+              src={smallerThanTablet ? "/mainVisualSP.png" : "/mainVisual.png"}
               alt="main visual"
               fill
               priority
