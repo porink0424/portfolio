@@ -11,4 +11,7 @@ export const LINK = {
     NLP2023:
       "https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P9-5.pdf",
   },
+  BEND: "https://www.wantedly.com/companies/company_7765230",
+  TEAM_LAB: "https://www.team-lab.com/",
+  DCC: "https://github.com/porinky0424/dcc",
 };

@@ -50,6 +50,7 @@ const data = {
     internship: [
       {
         title: "株式会社ベンド　フルスタックエンジニア",
+        href: LINK.BEND,
         period: {
           start: "2020/12",
           end: "Present",
@@ -70,6 +71,7 @@ const data = {
       },
       {
         title: "チームラボ株式会社　フロントエンドエンジニア",
+        href: LINK.TEAM_LAB,
         period: {
           start: "2023/02",
           end: "2023/03",
@@ -91,6 +93,7 @@ const data = {
     personal: [
       {
         title: "ぷよぷよテトリスAI",
+        href: LINK.PYTRIS,
         children: (
           <>
             <p>
@@ -110,6 +113,7 @@ const data = {
       },
       {
         title: "リバーシAI",
+        href: LINK.REVERSI,
         children: (
           <>
             <p>マルチスレッドで動くリバーシの対戦用AIを作成しました。</p>
@@ -120,6 +124,7 @@ const data = {
       },
       {
         title: "C言語のサブセット用のミニコンパイラ (WIP)",
+        href: LINK.DCC,
         children: (
           <>
             <p>Rui Ueyamaさんの記事に沿って、</p>
@@ -134,6 +139,7 @@ const data = {
     educational: [
       {
         title: "OCamlのサブセット用のコンパイラ",
+        href: LINK.PYCAML,
         children: (
           <>
             <p>
@@ -190,6 +196,7 @@ const data = {
     internship: [
       {
         title: "Full Stack Engineer at Bend Inc.",
+        href: LINK.BEND,
         period: {
           start: "2020/12",
           end: "Present",
@@ -216,6 +223,7 @@ const data = {
       },
       {
         title: "Front-End Engineer at teamLab",
+        href: LINK.TEAM_LAB,
         period: {
           start: "2023/02",
           end: "2023/03",
@@ -238,6 +246,7 @@ const data = {
     personal: [
       {
         title: "Puyopuyo Tetris AI",
+        href: LINK.PYTRIS,
         children: (
           <>
             <p>
@@ -257,6 +266,7 @@ const data = {
       },
       {
         title: "Reversi AI",
+        href: LINK.REVERSI,
         children: (
           <>
             <p>I created a multithreaded AI for Reversi.</p>
@@ -267,6 +277,7 @@ const data = {
       },
       {
         title: "Mini-Compiler for the subset language of C-lang (WIP)",
+        href: LINK.DCC,
         children: (
           <>
             <p>Along with the Rui Ueyama&apos;s article,</p>
@@ -281,6 +292,7 @@ const data = {
     educational: [
       {
         title: "Compiler for the subset language of OCaml",
+        href: LINK.PYCAML,
         children: (
           <>
             <p>
@@ -335,6 +347,7 @@ export default function SectionExperiences() {
         (
           iter: {
             title: string;
+            href?: string;
             period: { start: string; end: string } | undefined;
             children: ReactNode;
           },
@@ -344,6 +357,7 @@ export default function SectionExperiences() {
             <HighlightedItem
               key={index}
               title={iter.title}
+              href={iter.href}
               period={iter.period}
             >
               {iter.children}
@@ -357,12 +371,13 @@ export default function SectionExperiences() {
         (
           iter: {
             title: string;
+            href?: string;
             children: ReactNode;
           },
           index: number
         ) => {
           return (
-            <HighlightedItem key={index} title={iter.title}>
+            <HighlightedItem key={index} title={iter.title} href={iter.href}>
               {iter.children}
             </HighlightedItem>
           );
@@ -374,12 +389,13 @@ export default function SectionExperiences() {
         (
           iter: {
             title: string;
+            href?: string;
             children: ReactNode;
           },
           index: number
         ) => {
           return (
-            <HighlightedItem key={index} title={iter.title}>
+            <HighlightedItem key={index} title={iter.title} href={iter.href}>
               {iter.children}
             </HighlightedItem>
           );
