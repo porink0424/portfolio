@@ -9,15 +9,12 @@ export default function MainVisual() {
     <>
       <div className={styles.mainVisual}>
         <div className={styles.imagewrapper}>
-          <div className={styles.image}>
-            <Image
-              src={smallerThanTablet ? "/mainVisualSP.png" : "/mainVisual.png"}
-              alt="main visual"
-              fill
-              priority
-              style={{ objectFit: "cover" }}
-            />
-          </div>
+          <img
+            className={styles.image}
+            src={smallerThanTablet ? "/mainVisualSP.png" : "/mainVisual.png"}
+            alt="main visual"
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div className={styles.content}>
           <p className={styles.belonging}>
