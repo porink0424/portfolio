@@ -1,6 +1,10 @@
 .mainVisual {
   $aspectRatio: 1/0.42;
 
+  @media screen and (max-width: 768px) {
+    $aspectRatio: 1/0.6;
+  }
+
   > .imagewrapper {
     width: 100%;
     aspect-ratio: $aspectRatio;

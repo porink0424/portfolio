@@ -9,6 +9,40 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   border-radius: 9999px;
   border: 2px solid #000;
+  z-index: var(--z-index-top-header);
+
+  > .opener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    > span {
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      margin-left: 20px;
+      margin-right: 14px;
+      background-color: #000;
+      transition: all 0.4s ease;
+
+      &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+
+      &.top.Open {
+        transform: translateY(11px) rotate(45deg);
+      }
+
+      &.center.Open {
+        opacity: 0;
+      }
+
+      &.bottom.Open {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    }
+  }
 
   > .name {
     height: 100%;
@@ -17,6 +51,11 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex: 1;
+      justify-content: center;
+    }
   }
 
   > .sectionItems {
@@ -68,5 +107,47 @@
     margin: 0 20px 0 16px;
     width: 44px;
     height: 16px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: #ccc;
+  z-index: var(--z-index-top-header-container);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > .sections {
+    width: 70%;
+    padding: 160px 0 60px 0;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    > .item {
+      color: #000;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+  }
+
+  > .links {
+    margin: 0;
+    width: 128px;
+    display: flex;
+    justify-content: space-between;
   }
 }
