@@ -1,3 +1,5 @@
+@import "@/styles/mixin.scss";
+
 .bottomFooter {
   padding: 100px 0 40px;
   display: flex;
@@ -8,12 +10,18 @@
   > .sectionItems {
     display: flex;
     margin-bottom: 40px;
+    @include sp {
+      flex-direction: column;
+    }
 
     > .item {
       margin: 0 20px;
       color: black;
       text-decoration: none;
       font-weight: bold;
+      @include sp {
+        margin-bottom: 8px;
+      }
     }
   }
 

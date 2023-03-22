@@ -27,6 +27,9 @@
     color: #fff;
     font-weight: 700;
     padding-left: 48px;
+    @include sp {
+      padding-left: 12px;
+    }
     display: flex;
     flex-flow: column;
     justify-content: center;
