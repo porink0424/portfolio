@@ -50,6 +50,15 @@ export default class Main extends Phaser.Scene {
     this.tiles?.destroy(true, true);
   };
 
+  // containerの大きさに合わせて、タイルを作り直す
+  public remake = () => {
+    this.destroyTiles();
+    this.makeTiles();
+    this.cameraMarginTop =
+      document.getElementById("mainVisual")!.getBoundingClientRect().height -
+      48;
+  };
+
   constructor() {
     super({ key: "Main", active: true });
 
@@ -59,11 +68,7 @@ export default class Main extends Phaser.Scene {
       48;
 
     window.addEventListener("resize", () => {
-      this.destroyTiles();
-      this.makeTiles();
-      this.cameraMarginTop =
-        document.getElementById("mainVisual")!.getBoundingClientRect().height -
-        48;
+      this.remake();
     });
   }
 

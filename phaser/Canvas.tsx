@@ -1,3 +1,4 @@
+import { useLanguageContext } from "@/contexts/Language.context";
 import Phaser from "phaser";
 import { useEffect, useRef } from "react";
 import Main, { CELL_SIZE } from "./Main";
@@ -16,19 +17,13 @@ const config: Phaser.Types.Core.GameConfig = {
     width: CELL_SIZE * 2,
     height: window.innerHeight,
   },
-  physics: {
-    default: "arcade",
-    arcade: {
-      gravity: { y: 0 },
-      debug: false,
-    },
-  },
   scene: [Main],
 };
 
 export default function Canvas() {
   const gameRef = useRef<Phaser.Game | null>(null);
   const gameGeneratedRef = useRef(false);
+  const { languageKey } = useLanguageContext();
 
   useEffect(() => {
     if (!gameGeneratedRef.current) {
@@ -36,6 +31,15 @@ export default function Canvas() {
       gameRef.current = new Phaser.Game(config);
     }
   }, []);
+
+  useEffect(() => {
+    const scene = gameRef.current?.scene.getScene("Main") as Main;
+    if (scene) {
+      setTimeout(() => {
+        scene.remake();
+      }, 100);
+    }
+  }, [languageKey]);
 
   return <></>;
 }
