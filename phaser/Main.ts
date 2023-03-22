@@ -7,11 +7,15 @@ const SPRITE_KEY = {
   CHARACTER: "character",
 };
 const SPEED = 3;
+const MAX_LEVEL = 99;
 
 export default class Main extends Phaser.Scene {
   // mainVisualの分は余白を開けたい
   private cameraMarginTop!: number;
 
+  private level!: Phaser.GameObjects.DOMElement;
+  private levelDom!: HTMLElement;
+  private levelValue = 1;
   private character!: Phaser.GameObjects.Sprite;
   private chest!: Phaser.GameObjects.Image;
   private tiles!: Phaser.GameObjects.Group;
@@ -48,6 +52,17 @@ export default class Main extends Phaser.Scene {
   // 全てのタイルを破壊する
   destroyTiles = () => {
     this.tiles?.destroy(true, true);
+  };
+
+  setLevelPosition = () => {
+    this.level.setPosition(this.character.x, this.character.y - 34);
+  };
+
+  levelUp = () => {
+    if (this.levelValue < MAX_LEVEL) {
+      this.levelValue += 1;
+      this.levelDom.firstChild!.textContent = `Lv ${this.levelValue}`;
+    }
   };
 
   // containerの大きさに合わせて、タイルを作り直す
@@ -137,6 +152,27 @@ export default class Main extends Phaser.Scene {
     this.chest = this.add
       .image(CELL_SIZE, characterTargetY(), SPRITE_KEY.CHEST)
       .setDepth(1);
+
+    // レベル表示を作成する
+    const levelTextDom = document.createElement("p");
+    levelTextDom.style.lineHeight = "1";
+    levelTextDom.style.width = "100%";
+    levelTextDom.style.height = "100%";
+    levelTextDom.style.display = "flex";
+    levelTextDom.style.justifyContent = "center";
+    levelTextDom.style.alignItems = "center";
+    levelTextDom.innerText = `Lv ${this.levelValue}`;
+    this.levelDom = document.createElement("div");
+    this.levelDom.style.width = "60px";
+    this.levelDom.style.height = "24px";
+    this.levelDom.style.fontFamily = "PixelMplus10-Regular";
+    this.levelDom.style.backgroundColor = "#fff";
+    this.levelDom.style.border = "2px solid #000";
+    this.levelDom.style.borderRadius = "4px";
+    this.levelDom.appendChild(levelTextDom);
+    this.level = this.add.dom(0, 0, this.levelDom);
+    this.setLevelPosition();
+
     window.addEventListener(
       "scroll",
       () => {
@@ -186,7 +222,10 @@ export default class Main extends Phaser.Scene {
       }
       if (hasReached) {
         this.moveInfo = null;
+        this.levelUp();
       }
+
+      this.setLevelPosition();
     }
   };
 }
