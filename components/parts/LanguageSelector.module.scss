@@ -38,11 +38,18 @@
     right: -50px;
     border: 1px solid #000;
     z-index: var(--z-index-language-selector);
+    border-radius: 6px;
+    overflow: hidden;
 
     > .item {
       padding: 6px 20px;
       text-align: center;
       cursor: pointer;
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: #ddd;
+      }
 
       &:not(:last-child) {
         border-bottom: 1px solid #000;

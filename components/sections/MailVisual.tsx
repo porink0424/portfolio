@@ -11,6 +11,7 @@ export default function MainVisual() {
               src="/mainVisual.png"
               alt="main visual"
               fill
+              priority
               style={{ objectFit: "cover" }}
             />
           </div>
