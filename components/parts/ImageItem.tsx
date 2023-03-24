@@ -25,6 +25,8 @@ export default function ImageItem({
       <Link
         href={href}
         className={classNames(styles.imagewrapper, { [styles.Long]: long })}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className={styles.image}>
           <Image

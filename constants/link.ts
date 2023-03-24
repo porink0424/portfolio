@@ -14,4 +14,6 @@ export const LINK = {
   BEND: "https://www.wantedly.com/companies/company_7765230",
   TEAM_LAB: "https://www.team-lab.com/",
   DCC: "https://github.com/porinky0424/dcc",
+  CYGAMES: "https://www.cygames.co.jp/",
+  REVERSI_REPLIT: "https://repl.it/github/porinky0424/reversi",
 };

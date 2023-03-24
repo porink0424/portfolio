@@ -22,7 +22,12 @@ export default function HighlightedItem({
       <div className="_contentMarginLeft">
         <div className={styles.content}>
           {href ? (
-            <Link className={styles.title} href={href}>
+            <Link
+              className={styles.title}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {title}
             </Link>
           ) : (

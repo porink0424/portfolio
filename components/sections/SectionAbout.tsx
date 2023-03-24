@@ -11,11 +11,11 @@ import styles from "./SectionAbout.module.scss";
 const data = {
   JP: {
     text: [
-      "名前",
+      "名前 :",
       "加藤大地 (Daichi KATO)",
-      "所属",
+      "所属 :",
       "東京大学理学部情報科学科4年",
-      "専攻",
+      "専攻 :",
       "自然言語処理",
       "Webエンジニアとして",
       "研究、機械学習、競プロ、趣味の開発で",
@@ -56,7 +56,7 @@ const data = {
       "Major :",
       "NLP (Natural Language Processing)",
       "As a Web engineer :",
-      "In research, ML, competitive programming, and hobby developmen :",
+      "In research, ML, competitive programming, and personal development :",
       "In environments that require low-layer implementation and processing speed :",
       "Others :",
       "Applied Information Technology Engineer Examination (応用情報技術者試験) Expected to be acquired",
@@ -151,8 +151,9 @@ export default function SectionAbout() {
         <p>{selectedData.text[6]}</p>
       </div>
       <ul className={classNames(styles.line, "_contentMarginLeft")}>
-        <li>TypeScript & React, Vue.js, Next.js</li>
-        <li>HTML/CSS, PHP & Laravel</li>
+        <li>TypeScript & React & Next.js, Vue.js</li>
+        <li>HTML/CSS</li>
+        <li>PHP & Laravel</li>
         <li>AWS, GCP</li>
         <li>Three.js & React Three Fiber, Phaser</li>
       </ul>
@@ -179,7 +180,7 @@ export default function SectionAbout() {
       </div>
       <ul className={classNames(styles.line, "_contentMarginLeft")}>
         <li>TOEFL : 92</li>
-        <li>{selectedData.text[10]}</li>
+        {/* <li>{selectedData.text[10]}</li> */}
       </ul>
     </div>
   );

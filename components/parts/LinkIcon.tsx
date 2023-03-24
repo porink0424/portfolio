@@ -10,7 +10,12 @@ type Props = {
 
 export default function LinkIcon({ src, alt, href }: Props) {
   return (
-    <Link href={href} className={styles.icon}>
+    <Link
+      href={href}
+      className={styles.icon}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Image src={src} alt={alt ?? ""} fill style={{ objectFit: "contain" }} />
     </Link>
   );

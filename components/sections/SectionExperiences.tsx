@@ -1,5 +1,6 @@
 import { LINK } from "@/constants/link";
 import useSelectData from "@/hooks/useSelectData";
+import Link from "next/link";
 import { ReactNode } from "react";
 import HighlightedItem from "../parts/HighlightedItem";
 import ImageItem from "../parts/ImageItem";
@@ -90,6 +91,16 @@ const data = {
         ),
       },
     ],
+    partTimeJob: [
+      {
+        title: "株式会社Cygames",
+        href: LINK.CYGAMES,
+        period: {
+          start: "2021/04",
+          end: "Present",
+        },
+      },
+    ],
     personal: [
       {
         title: "ぷよぷよテトリスAI",
@@ -118,7 +129,16 @@ const data = {
           <>
             <p>マルチスレッドで動くリバーシの対戦用AIを作成しました。</p>
             <p>CUIだけでは寂しかったので、簡易的なGUIも追加しました。</p>
-            <p>ReplitでDEMOをいじれます。</p>
+            <p>
+              <Link
+                href={LINK.REVERSI_REPLIT}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Replit
+              </Link>
+              でDEMOをいじることができます。
+            </p>
           </>
         ),
       },
@@ -167,14 +187,14 @@ const data = {
         imageSrc: "/manabitimes.png",
         title: "Web Media ''Shikaku Times'' ''Manabi Times''",
         content:
-          "I am responsible for both front and back-end implementation and maintenance of not only the Web site itself, but also the CMS.",
+          "I am responsible for both front and back-end implementation and maintenance of the websites and their CMS.",
         href: LINK.MANABITIMES,
       },
       {
         imageSrc: "/pytris.png",
-        title: "PuyoPuyo Tetris AI Scratched in Python ''py-tris''",
+        title: "Puyo Puyo Tetris AI Scratched in Python ''py-tris''",
         content:
-          "Utilizing OS APIs and other tools, this AI runs on the actual application. It is also capable of playing against humans in the application.",
+          "This AI runs on the application using OS APIs and other tools. It is also capable of playing against humans in the application.",
         href: LINK.PYTRIS,
         long: true,
       },
@@ -204,8 +224,8 @@ const data = {
         children: (
           <>
             <p>
-              My primary focus is on front-end development, but I am also deeply
-              involved in a wide range of tasks, including back-end and server
+              My primary focus is on front-end development. I am also deeply
+              involved in various tasks, including back-end and server
               management.
             </p>
             <ul>
@@ -235,7 +255,7 @@ const data = {
               front-end development team to work on practical tasks.
             </p>
             <ul>
-              <li>System replacement of a web site</li>
+              <li>System replacement of a website</li>
               <li>Participation in both internal and external meetings</li>
               <li>Webview implementation for a new app</li>
             </ul>
@@ -243,14 +263,24 @@ const data = {
         ),
       },
     ],
+    partTimeJob: [
+      {
+        title: "Cygames Inc.",
+        href: LINK.CYGAMES,
+        period: {
+          start: "2021/04",
+          end: "Present",
+        },
+      },
+    ],
     personal: [
       {
-        title: "Puyopuyo Tetris AI",
+        title: "Puyo Puyo Tetris AI",
         href: LINK.PYTRIS,
         children: (
           <>
             <p>
-              I created an AI that runs in the &apos;&apos;Puyopuyo
+              I created an AI that runs in the &apos;&apos;Puyo Puyo
               Tetris&apos;&apos; game with my university classmates.
             </p>
             <p>
@@ -270,8 +300,18 @@ const data = {
         children: (
           <>
             <p>I created a multithreaded AI for Reversi.</p>
-            <p>I also added a simple GUI since CUI alone was boring.</p>
-            <p>You can play the DEMO in Replit.</p>
+            <p>I also added a simple GUI since CUI alone was just boring.</p>
+            <p>
+              You can play the DEMO in{" "}
+              <Link
+                href={LINK.REVERSI_REPLIT}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Replit
+              </Link>
+              .
+            </p>
           </>
         ),
       },
@@ -280,7 +320,7 @@ const data = {
         href: LINK.DCC,
         children: (
           <>
-            <p>Along with the Rui Ueyama&apos;s article,</p>
+            <p>Along with Rui Ueyama&apos;s article,</p>
             <p>
               I am in the process of implementing a compiler in Rust that
               compiles a subset language of C-lang into a RISC-V based assembly.
@@ -297,9 +337,9 @@ const data = {
           <>
             <p>
               In the &apos;&apos;CPU Experiment&apos;&apos;, in which a team of
-              four people create a CPU architecture to run a given program, in
-              my role as a developer of a compiler, I built a compiler for the
-              subset language of OCaml.
+              four people creates a CPU architecture to run a given program, in
+              my role as a compiler developer, I built a compiler for the subset
+              language of OCaml.
             </p>
             <p>I implemented this in Python and OCaml.</p>
           </>
@@ -362,6 +402,27 @@ export default function SectionExperiences() {
             >
               {iter.children}
             </HighlightedItem>
+          );
+        }
+      )}
+
+      <TitleH2 title="Part-Time Job" />
+      {selectedData.partTimeJob.map(
+        (
+          iter: {
+            title: string;
+            href?: string;
+            period: { start: string; end: string } | undefined;
+          },
+          index: number
+        ) => {
+          return (
+            <HighlightedItem
+              key={index}
+              title={iter.title}
+              href={iter.href}
+              period={iter.period}
+            ></HighlightedItem>
           );
         }
       )}
