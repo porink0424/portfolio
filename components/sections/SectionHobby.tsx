@@ -14,10 +14,10 @@ const data = {
   },
   EN: {
     text: [
-      "ラーメン巡り",
-      "ハンドボール、サッカー",
-      "ジム",
-      "ゲーム（ドラクエ、テトリス）、漫画",
+      "Going around for ramen",
+      "Handball, Football",
+      "Training at the gym",
+      "Video Games (Dragon Quest, Tetris), Comic Books",
     ],
   },
 } as const;

@@ -1,5 +1,6 @@
 import { LINK } from "@/constants/link";
 import useSelectData from "@/hooks/useSelectData";
+import useWindowSize from "@/hooks/useWindowSize";
 import classNames from "classnames";
 import HighlightedItem from "../parts/HighlightedItem";
 import LinkIcon from "../parts/LinkIcon";
@@ -88,6 +89,7 @@ const data = {
 } as const;
 
 export default function SectionAbout() {
+  const { smallerThanTablet } = useWindowSize();
   const { selectedData } = useSelectData(data);
 
   return (
@@ -96,19 +98,25 @@ export default function SectionAbout() {
 
       <TitleH2 title="Profile" />
       <div
-        className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
+        className={classNames(styles.line, "_contentMarginLeft", {
+          [styles.Flex]: !smallerThanTablet,
+        })}
       >
         <p className={styles.left}>{selectedData.text[0]}</p>
         <p className={styles.right}>{selectedData.text[1]}</p>
       </div>
       <div
-        className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
+        className={classNames(styles.line, "_contentMarginLeft", {
+          [styles.Flex]: !smallerThanTablet,
+        })}
       >
         <p className={styles.left}>{selectedData.text[2]}</p>
         <p className={styles.right}>{selectedData.text[3]}</p>
       </div>
       <div
-        className={classNames(styles.line, "_contentMarginLeft", styles.Flex)}
+        className={classNames(styles.line, "_contentMarginLeft", {
+          [styles.Flex]: !smallerThanTablet,
+        })}
       >
         <p className={styles.left}>{selectedData.text[4]}</p>
         <p className={styles.right}>{selectedData.text[5]}</p>

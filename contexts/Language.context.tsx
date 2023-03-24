@@ -17,7 +17,7 @@ export function useLanguageContext(): Context {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [languageKey, setLanguageKey] = useState<LanguageKey>("JP");
+  const [languageKey, setLanguageKey] = useState<LanguageKey>("EN");
 
   const value = useMemo(
     () => ({

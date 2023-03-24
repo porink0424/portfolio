@@ -41,6 +41,7 @@ export default function LanguageSelector() {
                   })}
                   onClick={() => {
                     setLanguageKey(key as LanguageKey);
+                    setOpen(false);
                   }}
                 >
                   <p className={styles.text}>{value}</p>
