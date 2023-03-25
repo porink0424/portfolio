@@ -165,7 +165,6 @@ export default class Main extends Phaser.Scene {
     this.levelDom = document.createElement("div");
     this.levelDom.style.width = "60px";
     this.levelDom.style.height = "24px";
-    this.levelDom.style.fontFamily = '"PixelMplus10-Regular"';
     this.levelDom.style.backgroundColor = "#fff";
     this.levelDom.style.border = "2px solid #000";
     this.levelDom.style.borderRadius = "4px";
