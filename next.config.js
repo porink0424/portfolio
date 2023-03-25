@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const urlPrefix = process.env.URL_PREFIX ? "/" + process.env.URL_PREFIX : "";
-
 const nextConfig = {
-  assetPrefix: urlPrefix,
-  basePath: urlPrefix,
+  assetPrefix: process.env.GITHUB_ACTIONS && "/portfolio",
+  basePath: process.env.GITHUB_ACTIONS && "/portfolio",
   trailingSlash: true,
-  publicRuntimeConfig: { urlPrefix },
   reactStrictMode: true,
 };
 
