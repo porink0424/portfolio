@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./ImageItem.module.scss";
 
@@ -29,11 +28,10 @@ export default function ImageItem({
         rel="noopener noreferrer"
       >
         <div className={styles.image}>
-          <Image
+          <img
+            style={{ objectFit: "cover" }}
             src={imageSrc}
             alt={imageAlt ?? ""}
-            fill
-            style={{ objectFit: "cover" }}
           />
         </div>
         <div className={styles.titleTip}>

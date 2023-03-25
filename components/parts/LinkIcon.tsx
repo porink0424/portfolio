@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./LinkIcon.module.scss";
 
 type Props = {
@@ -16,7 +15,7 @@ export default function LinkIcon({ src, alt, href }: Props) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Image src={src} alt={alt ?? ""} fill style={{ objectFit: "contain" }} />
+      <img src={src} alt={alt ?? ""} style={{ objectFit: "contain" }} />
     </Link>
   );
 }

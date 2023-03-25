@@ -1,5 +1,4 @@
 import useWindowSize from "@/hooks/useWindowSize";
-import Image from "next/image";
 import styles from "./MainVisual.module.scss";
 
 export default function MainVisual() {
