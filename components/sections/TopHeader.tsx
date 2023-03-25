@@ -98,9 +98,9 @@ export default function TopHeader() {
             })}
           </div>
           <div className={classNames(styles.links, "_contentMarginLeft")}>
-            <LinkIcon src="/github-mark.png" href={LINK.GITHUB} />
-            <LinkIcon src="/qiita.png" href={LINK.QIITA} />
-            <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
+            <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
+            <LinkIcon src="./qiita.png" href={LINK.QIITA} />
+            <LinkIcon src="./twitter.png" href={LINK.TWITTER} />
           </div>
         </div>
       )}

@@ -21,9 +21,9 @@ export default function BottomFooter() {
         })}
       </div>
       <div className={styles.links}>
-        <LinkIcon src="/github-mark.png" href={LINK.GITHUB} />
-        <LinkIcon src="/qiita.png" href={LINK.QIITA} />
-        <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
+        <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
+        <LinkIcon src="./qiita.png" href={LINK.QIITA} />
+        <LinkIcon src="./twitter.png" href={LINK.TWITTER} />
       </div>
       <p className={styles.copyright}>
         <span className={styles.mark}>&copy;</span> Copyright 2023 Daichi Kato.

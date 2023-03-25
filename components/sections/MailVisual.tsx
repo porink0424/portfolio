@@ -10,7 +10,7 @@ export default function MainVisual() {
         <div className={styles.imagewrapper}>
           <img
             className={styles.image}
-            src={smallerThanTablet ? "/mainVisualSP.png" : "/mainVisual.png"}
+            src={smallerThanTablet ? "./mainVisualSP.png" : "./mainVisual.png"}
             alt="main visual"
             style={{ objectFit: "cover" }}
           />

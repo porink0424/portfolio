@@ -123,8 +123,8 @@ export default function SectionAbout() {
       </div>
       <div className={classNames(styles.links, "_contentMarginLeft")}>
         <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
-        <LinkIcon src="/qiita.png" href={LINK.QIITA} />
-        <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
+        <LinkIcon src="./qiita.png" href={LINK.QIITA} />
+        <LinkIcon src="./twitter.png" href={LINK.TWITTER} />
       </div>
 
       <TitleH2 title="History" />

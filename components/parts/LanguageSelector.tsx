@@ -17,7 +17,11 @@ export default function LanguageSelector() {
           setOpen((cur) => !cur);
         }}
       >
-        <img className={styles.image} src="/world.svg" alt="languageSelector" />
+        <img
+          className={styles.image}
+          src="./world.svg"
+          alt="languageSelector"
+        />
         <span className={classNames(styles.opener, { [styles.Open]: open })} />
       </div>
 

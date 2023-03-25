@@ -12,21 +12,21 @@ const data = {
   JP: {
     images: [
       {
-        imageSrc: "/metalife.png",
+        imageSrc: "./metalife.png",
         title: "2Dコミュニケーションツール「MetaLife」",
         content:
           "構想、要件定義、設計、実装、保守全てのフェーズに参加しています。",
         href: LINK.METALIFE,
       },
       {
-        imageSrc: "/manabitimes.png",
+        imageSrc: "./manabitimes.png",
         title: "Webメディア「資格Times」「学びTimes」",
         content:
           "メディアサイトのみならず、CMSのフロント・バック両方の実装&保守を行なっています。",
         href: LINK.MANABITIMES,
       },
       {
-        imageSrc: "/pytris.png",
+        imageSrc: "./pytris.png",
         title: "Pythonで動くぷよぷよテトリスAI「py-tris」",
         content:
           "OSのAPI等も駆使しつつ、実機上で実際に動くAIなので、人間と対戦することもできます。",
@@ -34,14 +34,14 @@ const data = {
         long: true,
       },
       {
-        imageSrc: "/reversi.png",
+        imageSrc: "./reversi.png",
         title: "Rustで動くリバーシAI",
         content:
           "マルチスレッドな実装を生かし、最終盤では全探索を行います。そこそこ強いです。",
         href: LINK.REVERSI,
       },
       {
-        imageSrc: "/pycaml.png",
+        imageSrc: "./pycaml.png",
         title: "OCamlサブセット言語用コンパイラ「pycaml」",
         content:
           "プログラム言語理論に基づく最適化も実装された、PythonとOCamlによるコンパイラです。",
@@ -177,21 +177,21 @@ const data = {
   EN: {
     images: [
       {
-        imageSrc: "/metalife.png",
+        imageSrc: "./metalife.png",
         title: "2D Communication Tool ''MetaLife''",
         content:
           "I have been involved in all phases of the project, including conceptualization, requirements definition, design, implementation, and maintenance.",
         href: LINK.METALIFE,
       },
       {
-        imageSrc: "/manabitimes.png",
+        imageSrc: "./manabitimes.png",
         title: "Web Media ''Shikaku Times'' ''Manabi Times''",
         content:
           "I am responsible for both front and back-end implementation and maintenance of the websites and their CMS.",
         href: LINK.MANABITIMES,
       },
       {
-        imageSrc: "/pytris.png",
+        imageSrc: "./pytris.png",
         title: "Puyo Puyo Tetris AI Scratched in Python ''py-tris''",
         content:
           "This AI runs on the application using OS APIs and other tools. It is also capable of playing against humans in the application.",
@@ -199,14 +199,14 @@ const data = {
         long: true,
       },
       {
-        imageSrc: "/reversi.png",
+        imageSrc: "./reversi.png",
         title: "Reversi AI Scratched in Rust",
         content:
           "Thanks to a multithreaded implementation, it performs a complete search in the endgame. Reasonably strong.",
         href: LINK.REVERSI,
       },
       {
-        imageSrc: "/pycaml.png",
+        imageSrc: "./pycaml.png",
         title: "Compiler for the Subset of OCaml ''pycaml''",
         content:
           "This compiler, built using Python and OCaml, incorporates optimizations based on programming language theory.",
