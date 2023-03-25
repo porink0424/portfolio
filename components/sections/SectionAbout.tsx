@@ -1,7 +1,6 @@
 import { LINK } from "@/constants/link";
 import useSelectData from "@/hooks/useSelectData";
 import useWindowSize from "@/hooks/useWindowSize";
-import { url } from "@/utils/config";
 import classNames from "classnames";
 import HighlightedItem from "../parts/HighlightedItem";
 import LinkIcon from "../parts/LinkIcon";
@@ -123,7 +122,7 @@ export default function SectionAbout() {
         <p className={styles.right}>{selectedData.text[5]}</p>
       </div>
       <div className={classNames(styles.links, "_contentMarginLeft")}>
-        <LinkIcon src={url("/github-mark.png")} href={LINK.GITHUB} />
+        <LinkIcon src={"/github-mark.png"} href={LINK.GITHUB} />
         <LinkIcon src="/qiita.png" href={LINK.QIITA} />
         <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
       </div>
