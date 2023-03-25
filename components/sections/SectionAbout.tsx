@@ -122,7 +122,7 @@ export default function SectionAbout() {
         <p className={styles.right}>{selectedData.text[5]}</p>
       </div>
       <div className={classNames(styles.links, "_contentMarginLeft")}>
-        <LinkIcon src={"/github-mark.png"} href={LINK.GITHUB} />
+        <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
         <LinkIcon src="/qiita.png" href={LINK.QIITA} />
         <LinkIcon src="/twitter.png" href={LINK.TWITTER} />
       </div>
