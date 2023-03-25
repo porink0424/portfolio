@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <MainSectionProvider>
         <Head>
           <title>Daichi Kato&apos;s Portfolio</title>
-          <link rel="icon" href="./favicon.ico" />
         </Head>
         <Component {...pageProps} />
       </MainSectionProvider>
