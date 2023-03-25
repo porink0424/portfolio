@@ -1,7 +1,6 @@
 import { LanguageProvider } from "@/contexts/Language.context";
 import { MainSectionProvider } from "@/contexts/MainSection.context";
 import "modern-css-reset";
-import "../public/fonts.css";
 import type { AppProps } from "next/app";
 import "@/styles/zIndex.scss";
 import "@/styles/helper.scss";
