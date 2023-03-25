@@ -88,11 +88,11 @@ export default class Main extends Phaser.Scene {
   }
 
   preload = () => {
-    this.load.image(SPRITE_KEY.MAP_TIP_TOP, "/phaser/top.png");
-    this.load.image(SPRITE_KEY.MAP_TIP_CENTER, "/phaser/center.png");
-    this.load.image(SPRITE_KEY.MAP_TIP_BOTTOM, "/phaser/bottom.png");
-    this.load.image(SPRITE_KEY.CHEST, "/phaser/chest.png");
-    this.load.spritesheet(SPRITE_KEY.CHARACTER, "/phaser/character.png", {
+    this.load.image(SPRITE_KEY.MAP_TIP_TOP, "./phaser/top.png");
+    this.load.image(SPRITE_KEY.MAP_TIP_CENTER, "./phaser/center.png");
+    this.load.image(SPRITE_KEY.MAP_TIP_BOTTOM, "./phaser/bottom.png");
+    this.load.image(SPRITE_KEY.CHEST, "./phaser/chest.png");
+    this.load.spritesheet(SPRITE_KEY.CHARACTER, "./phaser/character.png", {
       frameWidth: CELL_SIZE,
       frameHeight: CELL_SIZE,
     });
