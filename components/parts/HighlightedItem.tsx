@@ -1,3 +1,4 @@
+import useWindowSize from "@/hooks/useWindowSize";
 import classNames from "classnames";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -16,10 +17,21 @@ export default function HighlightedItem({
   period,
   children,
 }: Props) {
+  const { smallerThanTablet } = useWindowSize();
+
   return (
     <div className={styles.highlightedItem}>
-      <div className={classNames(styles.leftborder, "_titleH2MarginLeft")} />
-      <div className="_contentMarginLeft">
+      <div
+        className={classNames(styles.leftborder, {
+          _titleH2MarginLeft: !smallerThanTablet,
+        })}
+      />
+      <div
+        className={classNames({
+          _contentMarginLeft: !smallerThanTablet,
+          _titleH2MarginLeft: smallerThanTablet,
+        })}
+      >
         <div className={styles.content}>
           {href ? (
             <Link
