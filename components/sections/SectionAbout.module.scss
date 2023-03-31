@@ -8,6 +8,10 @@
       width: 100px;
     }
 
+    > .right {
+      flex: 1;
+    }
+
     &.Flex {
       display: flex;
     }

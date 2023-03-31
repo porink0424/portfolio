@@ -17,7 +17,7 @@ export default function MainVisual() {
         </div>
         <div className={styles.content}>
           <p className={styles.belonging}>
-            B4 student at
+            M1 student at
             <br />
             The University of Tokyo, Japan
           </p>
