@@ -1,4 +1,5 @@
 import useSelectData from "@/hooks/useSelectData";
+import useWindowSize from "@/hooks/useWindowSize";
 import classNames from "classnames";
 import TitleH1 from "../parts/TitleH1";
 import styles from "./SectionHobby.module.scss";
@@ -24,12 +25,17 @@ const data = {
 
 export default function SectionHobby() {
   const { selectedData } = useSelectData(data);
+  const { smallerThanTablet } = useWindowSize();
 
   return (
     <div className={styles.sectionHobby}>
       <TitleH1 title="Hobby" />
 
-      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+      <ul
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <li>{selectedData.text[0]}</li>
         <li>{selectedData.text[1]}</li>
         <li>{selectedData.text[2]}</li>

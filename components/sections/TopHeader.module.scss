@@ -1,3 +1,5 @@
+@import "@/styles/mixin.scss";
+
 .topHeader {
   width: 97%;
   position: absolute;
@@ -52,9 +54,10 @@
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @include tab {
       flex: 1;
       justify-content: center;
+      font-size: 16px;
     }
   }
 
@@ -108,7 +111,7 @@
     width: 44px;
     height: 16px;
 
-    @media screen and (max-width: 768px) {
+    @include tab {
       margin-left: 0;
     }
   }

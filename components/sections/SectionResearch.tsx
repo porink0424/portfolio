@@ -1,5 +1,6 @@
 import { LINK } from "@/constants/link";
 import useSelectData from "@/hooks/useSelectData";
+import useWindowSize from "@/hooks/useWindowSize";
 import classNames from "classnames";
 import TitleH1 from "../parts/TitleH1";
 import TitleH2 from "../parts/TitleH2";
@@ -28,32 +29,57 @@ const data = {
 
 export default function SectionResearch() {
   const { selectedData } = useSelectData(data);
+  const { smallerThanTablet } = useWindowSize();
 
   return (
     <div className={styles.sectionResearch}>
       <TitleH1 title="Research" />
 
       <TitleH2 title="Interest" />
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p className={styles.h3}>{selectedData.text[0]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[1]}</p>
         <p>{selectedData.text[2]}</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[3]}</p>
         <p>{selectedData.text[4]}</p>
       </div>
 
       <TitleH2 title="Publications" />
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p className={styles.h3}>Domestic Conference (Non-refereed)</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>2023</p>
       </div>
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>
           <span className={styles.Highlight}>加藤大地</span>, 上田亮, 宮尾祐介.{" "}
         </p>

@@ -1,7 +1,13 @@
+@import "@/styles/mixin.scss";
+
 ul {
   margin: 0;
 }
 
 body {
   font-family: sans-serif;
+
+  @include sp {
+    font-size: 12px;
+  }
 }

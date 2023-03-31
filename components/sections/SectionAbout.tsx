@@ -98,30 +98,37 @@ export default function SectionAbout() {
 
       <TitleH2 title="Profile" />
       <div
-        className={classNames(styles.line, "_contentMarginLeft", {
+        className={classNames(styles.line, {
           [styles.Flex]: !smallerThanTablet,
+          _contentMarginLeft: !smallerThanTablet,
         })}
       >
         <p className={styles.left}>{selectedData.text[0]}</p>
         <p className={styles.right}>{selectedData.text[1]}</p>
       </div>
       <div
-        className={classNames(styles.line, "_contentMarginLeft", {
+        className={classNames(styles.line, {
           [styles.Flex]: !smallerThanTablet,
+          _contentMarginLeft: !smallerThanTablet,
         })}
       >
         <p className={styles.left}>{selectedData.text[2]}</p>
         <p className={styles.right}>{selectedData.text[3]}</p>
       </div>
       <div
-        className={classNames(styles.line, "_contentMarginLeft", {
+        className={classNames(styles.line, {
           [styles.Flex]: !smallerThanTablet,
+          _contentMarginLeft: !smallerThanTablet,
         })}
       >
         <p className={styles.left}>{selectedData.text[4]}</p>
         <p className={styles.right}>{selectedData.text[5]}</p>
       </div>
-      <div className={classNames(styles.links, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.links, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
         <LinkIcon src="./qiita.png" href={LINK.QIITA} />
         <LinkIcon src="./twitter.png" href={LINK.TWITTER} />
@@ -147,10 +154,18 @@ export default function SectionAbout() {
       )}
 
       <TitleH2 title="Skills" />
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[6]}</p>
       </div>
-      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+      <ul
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <li>TypeScript & React & Next.js, Vue.js</li>
         <li>HTML/CSS</li>
         <li>PHP & Laravel</li>
@@ -158,27 +173,51 @@ export default function SectionAbout() {
         <li>Three.js & React Three Fiber, Phaser</li>
       </ul>
 
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[7]}</p>
       </div>
-      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+      <ul
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <li>Python & PyTorch</li>
         <li>Unity (with C#)</li>
       </ul>
 
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[8]}</p>
       </div>
-      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+      <ul
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <li>Rust</li>
         <li>C, C++</li>
         <li>OCaml</li>
       </ul>
 
-      <div className={classNames(styles.line, "_contentMarginLeft")}>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <p>{selectedData.text[9]}</p>
       </div>
-      <ul className={classNames(styles.line, "_contentMarginLeft")}>
+      <ul
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
         <li>TOEFL : 92</li>
         {/* <li>{selectedData.text[10]}</li> */}
       </ul>
