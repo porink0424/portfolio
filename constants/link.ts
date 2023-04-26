@@ -5,7 +5,7 @@ export const LINK = {
   METALIFE: "https://metalife.co.jp/",
   MANABITIMES: "https://manabitimes.jp/",
   PYTRIS: "https://github.com/porinky0424/py-tris",
-  REVERSI: "https://github.com/porinky0424/reversi",
+  REVERSI: "https://github.com/porinky0424/reversi-bot",
   PYCAML: "https://github.com/porinky0424/pycaml",
   PAPER: {
     NLP2023:
@@ -15,5 +15,5 @@ export const LINK = {
   TEAM_LAB: "https://www.team-lab.com/",
   DCC: "https://github.com/porinky0424/dcc",
   CYGAMES: "https://www.cygames.co.jp/",
-  REVERSI_REPLIT: "https://repl.it/github/porinky0424/reversi",
+  REVERSI_DEMO: "https://porinky0424.github.io/reversi-bot-front/",
 };

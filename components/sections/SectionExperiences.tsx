@@ -35,9 +35,9 @@ const data = {
       },
       {
         imageSrc: "./reversi.png",
-        title: "Rustで動くリバーシAI",
+        title: "Rust & Three.jsで動くリバーシAI",
         content:
-          "マルチスレッドな実装を生かし、最終盤では全探索を行います。そこそこ強いです。",
+          "ロジックの部分がRust and WebAssembly、UIの部分がReact & Three.jsで動く対戦型リバーシAIです。そこそこ強いです。",
         href: LINK.REVERSI,
       },
       {
@@ -127,15 +127,20 @@ const data = {
         href: LINK.REVERSI,
         children: (
           <>
-            <p>マルチスレッドで動くリバーシの対戦用AIを作成しました。</p>
-            <p>CUIだけでは寂しかったので、簡易的なGUIも追加しました。</p>
+            <p>
+              ロジックの部分がRust and WebAssembly、UIの部分がReact &
+              Three.jsで動く対戦型リバーシAIです。
+            </p>
+            <p>
+              自分はオセロ初心者ですが、定石や経験則等を調べて、Botとして実現しました。
+            </p>
             <p>
               <Link
-                href={LINK.REVERSI_REPLIT}
+                href={LINK.REVERSI_DEMO}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Replit
+                こちらのページ
               </Link>
               でDEMOをいじることができます。
             </p>
@@ -200,9 +205,9 @@ const data = {
       },
       {
         imageSrc: "./reversi.png",
-        title: "Reversi AI Scratched in Rust",
+        title: "Reversi AI Scratched in Rust & Three.js",
         content:
-          "Thanks to a multithreaded implementation, it performs a complete search in the endgame. Reasonably strong.",
+          "Logic is implemented in Rust and WebAssembly, UI is implemented in React & Three.js. Reasonably strong.",
         href: LINK.REVERSI,
       },
       {
@@ -299,16 +304,22 @@ const data = {
         href: LINK.REVERSI,
         children: (
           <>
-            <p>I created a multithreaded AI for Reversi.</p>
-            <p>I also added a simple GUI since CUI alone was just boring.</p>
+            <p>
+              Logic is implemented in Rust and WebAssembly, UI is implemented in
+              React & Three.js.
+            </p>
+            <p>
+              Although I am a very biginner in Reversi, I looked for established
+              tactics and rules of thumb, etc., and realized them as a bot.
+            </p>
             <p>
               You can play the DEMO in{" "}
               <Link
-                href={LINK.REVERSI_REPLIT}
+                href={LINK.REVERSI_DEMO}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Replit
+                this page
               </Link>
               .
             </p>
