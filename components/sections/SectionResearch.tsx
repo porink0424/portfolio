@@ -68,12 +68,28 @@ export default function SectionResearch() {
       >
         <p className={styles.h3}>Domestic Conference (Non-refereed)</p>
       </div>
+
       <div
         className={classNames(styles.line, {
           _contentMarginLeft: !smallerThanTablet,
         })}
       >
         <p>2023</p>
+      </div>
+      <div
+        className={classNames(styles.line, {
+          _contentMarginLeft: !smallerThanTablet,
+        })}
+      >
+        <p>
+          <span className={styles.Highlight}>加藤大地</span>, 上田亮, 宮尾祐介.{" "}
+        </p>
+        <p>
+          「簡素な創発言語接触モデルで生じる言語のクレオール単純性と構成性」
+        </p>
+        <p>
+          人工知能学会第37回全国大会(JSAI2023). [<a>to appear</a>]
+        </p>
       </div>
       <div
         className={classNames(styles.line, {
