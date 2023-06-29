@@ -21,7 +21,7 @@ const data = {
       "研究、機械学習、競プロ、趣味の開発で",
       "低レイヤーな実装、処理速度が求められる環境で",
       "その他",
-      "応用情報技術者試験 取得予定",
+      "応用情報技術者試験",
     ],
     history: [
       {
@@ -59,7 +59,7 @@ const data = {
       "In research, ML, competitive programming, and personal development :",
       "In environments that require low-layer implementation and processing speed :",
       "Others :",
-      "Applied Information Technology Engineer Examination (応用情報技術者試験) Expected to be acquired",
+      "Applied Information Technology Engineer Examination (応用情報技術者試験)",
     ],
     history: [
       {
@@ -219,7 +219,7 @@ export default function SectionAbout() {
         })}
       >
         <li>TOEFL : 92</li>
-        {/* <li>{selectedData.text[10]}</li> */}
+        <li>{selectedData.text[10]}</li>
       </ul>
     </div>
   );
