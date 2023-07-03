@@ -71,6 +71,15 @@ const data = {
         ),
       },
       {
+        title: "株式会社松尾研究所　MLエンジニア",
+        href: LINK.MATSUO,
+        period: {
+          start: "2023/07",
+          end: "Present",
+        },
+        children: <></>,
+      },
+      {
         title: "チームラボ株式会社　フロントエンドエンジニア",
         href: LINK.TEAM_LAB,
         period: {
@@ -245,6 +254,15 @@ const data = {
             </ul>
           </>
         ),
+      },
+      {
+        title: "ML Engineer at Matsuo Institute Inc.",
+        href: LINK.MATSUO,
+        period: {
+          start: "2023/07",
+          end: "Present",
+        },
+        children: <></>,
       },
       {
         title: "Front-End Engineer at teamLab",

@@ -16,4 +16,5 @@ export const LINK = {
   DCC: "https://github.com/porinky0424/dcc",
   CYGAMES: "https://www.cygames.co.jp/",
   REVERSI_DEMO: "https://porinky0424.github.io/reversi-bot-front/",
+  MATSUO: "https://matsuo-institute.com/",
 };
