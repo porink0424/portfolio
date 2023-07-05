@@ -207,7 +207,7 @@ const data = {
     ],
     studyGroup: [
       {
-        title: "WebRTC Meetup Tokyo",
+        title: "WebRTC Meetup Tokyo #24",
         href: LINK.WEBRTC_MEETUP_TOKYO_24,
         period: {
           start: "2023/06/23",
@@ -428,7 +428,7 @@ const data = {
     ],
     studyGroup: [
       {
-        title: "WebRTC Meetup Tokyo",
+        title: "WebRTC Meetup Tokyo #24",
         href: LINK.WEBRTC_MEETUP_TOKYO_24,
         period: {
           start: "2023/06/23",
