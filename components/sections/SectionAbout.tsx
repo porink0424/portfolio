@@ -187,6 +187,7 @@ export default function SectionAbout() {
       >
         <li>Python & PyTorch</li>
         <li>Unity (with C#)</li>
+        <li>Flutter, Dart</li>
       </ul>
 
       <div

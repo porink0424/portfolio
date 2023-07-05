@@ -7,7 +7,7 @@ import styles from "./HighlightedItem.module.scss";
 type Props = {
   title: string;
   href?: string;
-  period?: { start: string; end: string };
+  period?: { start: string; end?: string };
   children?: ReactNode;
 };
 
@@ -48,7 +48,7 @@ export default function HighlightedItem({
 
           {period && (
             <p className={styles.period}>
-              {period.start} ~ {period.end}
+              {period.start} {period.end && `~ ${period.end}`}
             </p>
           )}
         </div>

@@ -187,6 +187,34 @@ const data = {
         ),
       },
     ],
+    hackathon: [
+      {
+        title: "ベネッセEdTechハッカソン（オーディエンス賞）",
+        href: LINK.BENESSE_HACKATHON,
+        period: {
+          start: "2023/07",
+        },
+        children: (
+          <>
+            <p>
+              『中高生にとって、次世代の学習を促進するようなアプリ』をテーマに、
+            </p>
+            <p>Flutterを用いて「企画」から「開発」まで2日間で行いました。</p>
+            <p>参加者の投票により、オーディエンス賞を受賞しました。</p>
+          </>
+        ),
+      },
+    ],
+    studyGroup: [
+      {
+        title: "WebRTC Meetup Tokyo",
+        href: LINK.WEBRTC_MEETUP_TOKYO_24,
+        period: {
+          start: "2023/06/23",
+        },
+        children: <></>,
+      },
+    ],
   },
   EN: {
     images: [
@@ -375,6 +403,39 @@ const data = {
         ),
       },
     ],
+    hackathon: [
+      {
+        title: "Benesse EdTech Hackathon (Audience Award Winner)",
+        href: LINK.BENESSE_HACKATHON,
+        period: {
+          start: "2023/07",
+        },
+        children: (
+          <>
+            <p>
+              With the theme of &quot;an app that promotes next-generation
+              learning for children,&quot;
+            </p>
+            <p>
+              we consistently experienced from planning to development in two
+              days.
+            </p>
+            <p>We used Flutteer to develop this app.</p>
+            <p>We won the Audience Award as voted by the participants.</p>
+          </>
+        ),
+      },
+    ],
+    studyGroup: [
+      {
+        title: "WebRTC Meetup Tokyo",
+        href: LINK.WEBRTC_MEETUP_TOKYO_24,
+        period: {
+          start: "2023/06/23",
+        },
+        children: <></>,
+      },
+    ],
   },
 } as const;
 
@@ -488,6 +549,50 @@ export default function SectionExperiences() {
             <HighlightedItem key={index} title={iter.title} href={iter.href}>
               {iter.children}
             </HighlightedItem>
+          );
+        }
+      )}
+      <TitleH2 title="Hackathon" />
+      {selectedData.hackathon.map(
+        (
+          iter: {
+            title: string;
+            href?: string;
+            period: { start: string; end?: string };
+            children: ReactNode;
+          },
+          index: number
+        ) => {
+          return (
+            <HighlightedItem
+              key={index}
+              title={iter.title}
+              href={iter.href}
+              period={iter.period}
+            >
+              {iter.children}
+            </HighlightedItem>
+          );
+        }
+      )}
+      <TitleH2 title="Study Groups" />
+      {selectedData.studyGroup.map(
+        (
+          iter: {
+            title: string;
+            href?: string;
+            period: { start: string; end?: string };
+            children: ReactNode;
+          },
+          index: number
+        ) => {
+          return (
+            <HighlightedItem
+              key={index}
+              title={iter.title}
+              href={iter.href}
+              period={iter.period}
+            ></HighlightedItem>
           );
         }
       )}
