@@ -170,7 +170,7 @@ export default function SectionAbout() {
         <li>HTML/CSS</li>
         <li>PHP & Laravel</li>
         <li>AWS, GCP</li>
-        <li>Three.js & React Three Fiber, Phaser</li>
+        <li>Three.js, Phaser</li>
       </ul>
 
       <div
