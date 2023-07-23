@@ -88,7 +88,8 @@ export default function SectionResearch() {
           「簡素な創発言語接触モデルで生じる言語のクレオール単純性と構成性」
         </p>
         <p>
-          人工知能学会第37回全国大会(JSAI2023). [<a>to appear</a>]
+          人工知能学会第37回全国大会(JSAI2023). [
+          <a href={LINK.PAPER.JSAI2023}>paper</a>]
         </p>
       </div>
       <div
