@@ -1,7 +1,7 @@
 export const LINK = {
   GITHUB: "https://github.com/porinky0424",
   QIITA: "https://qiita.com/porinky0424",
-  TWITTER: "https://twitter.com/daichi_sendai2",
+  X: "https://twitter.com/daichi_myg2120",
   METALIFE: "https://metalife.co.jp/",
   MANABITIMES: "https://manabitimes.jp/",
   PYTRIS: "https://github.com/porinky0424/py-tris",
@@ -13,7 +13,11 @@ export const LINK = {
       "https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P9-5.pdf",
     JSAI2023:
       "https://www.jstage.jst.go.jp/article/pjsai/JSAI2023/0/JSAI2023_4H2OS6a03/_article/-char/ja",
+    YANS2023_HACKATHON:
+      "https://twitter.com/yans_official/status/1697173190198587895",
   },
+  PREFERRED: "https://www.preferred.jp/ja/",
+  DENA: "https://dena.com/jp/",
   BEND: "https://www.wantedly.com/companies/company_7765230",
   TEAM_LAB: "https://www.team-lab.com/",
   DCC: "https://github.com/porinky0424/dcc",

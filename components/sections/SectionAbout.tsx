@@ -131,7 +131,7 @@ export default function SectionAbout() {
       >
         <LinkIcon src="./github-mark.png" href={LINK.GITHUB} />
         <LinkIcon src="./qiita.png" href={LINK.QIITA} />
-        <LinkIcon src="./twitter.png" href={LINK.TWITTER} />
+        <LinkIcon src="./x.png" href={LINK.X} />
       </div>
 
       <TitleH2 title="History" />
