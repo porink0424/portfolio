@@ -50,6 +50,43 @@ const data = {
     ],
     internship: [
       {
+        title: "株式会社Preferred Networks　インターン",
+        href: LINK.PREFERRED,
+        period: {
+          start: "2023/08",
+          end: "2023/09",
+        },
+        children: (
+          <>
+            <p>
+              「コンピュータビジョンのためのウェブアプリケーション開発」というテーマで、
+            </p>
+            <p>
+              約二ヶ月のプロジェクトインターンを行なっています。
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "株式会社ディー・エヌ・エー　短期インターン",
+        href: LINK.DENA,
+        period: {
+          start: "2023/09",
+        },
+        children: (
+          <p>短期インターンに参加しました。</p>
+        ),
+      },
+      {
+        title: "株式会社松尾研究所　MLエンジニア",
+        href: LINK.MATSUO,
+        period: {
+          start: "2023/07",
+          end: "Present",
+        },
+        children: <p>大規模言語モデル (LLM) の実験及び開発を行なっています。</p>,
+      },
+      {
         title: "株式会社ベンド　フルスタックエンジニア",
         href: LINK.BEND,
         period: {
@@ -69,15 +106,6 @@ const data = {
             </ul>
           </>
         ),
-      },
-      {
-        title: "株式会社松尾研究所　MLエンジニア",
-        href: LINK.MATSUO,
-        period: {
-          start: "2023/07",
-          end: "Present",
-        },
-        children: <></>,
       },
       {
         title: "チームラボ株式会社　フロントエンドエンジニア",
@@ -189,6 +217,20 @@ const data = {
     ],
     hackathon: [
       {
+        title: "NLP若手の会(YANS)2023ハッカソン（優秀賞・審査員特別賞）",
+        href: LINK.PAPER.YANS2023_HACKATHON,
+        period: {
+          start: "2023/08",
+        },
+        children: (
+          <>
+            <p>
+              OpenAI APIを利用したWebアプリを開発するハッカソンに参加しました。
+            </p>
+          </>
+        ),
+      },
+      {
         title: "ベネッセEdTechハッカソン（オーディエンス賞）",
         href: LINK.BENESSE_HACKATHON,
         period: {
@@ -257,6 +299,47 @@ const data = {
     ],
     internship: [
       {
+        title: "Intern at Preferred Networks Inc.",
+        href: LINK.PREFERRED,
+        period: {
+          start: "2023/08",
+          end: "2023/09",
+        },
+        children: (
+          <>
+            <p>
+              I am doing a two-month project internship under the theme of
+            </p>
+            <p>
+              &quot;Web application development for computer vision.&quot;
+            </p>
+          </>
+        ),
+      },
+      {
+        title: "Intern at DeNA Co., Ltd.",
+        href: LINK.DENA,
+        period: {
+          start: "2023/09",
+        },
+        children: (
+          <p>
+            I participated in a short-term internship.
+          </p>
+        ),
+      },
+      {
+        title: "ML Engineer at Matsuo Institute Inc.",
+        href: LINK.MATSUO,
+        period: {
+          start: "2023/07",
+          end: "Present",
+        },
+        children: <p>
+          I am doing experiments and development of large language models (LLM).
+        </p>,
+      },
+      {
         title: "Full Stack Engineer at Bend Inc.",
         href: LINK.BEND,
         period: {
@@ -282,15 +365,6 @@ const data = {
             </ul>
           </>
         ),
-      },
-      {
-        title: "ML Engineer at Matsuo Institute Inc.",
-        href: LINK.MATSUO,
-        period: {
-          start: "2023/07",
-          end: "Present",
-        },
-        children: <></>,
       },
       {
         title: "Front-End Engineer at teamLab",
@@ -405,6 +479,18 @@ const data = {
     ],
     hackathon: [
       {
+        title: "The 18th Symposium of Young Researcher Association for NLP Studies (YANS) 2023 (Excellence Award & Jury's Special Award Winner)",
+        href: LINK.PAPER.YANS2023_HACKATHON,
+        period: {
+          start: "2023/08",
+        },
+        children: (
+          <p>
+            I participated in a hackathon to develop a web application using the OpenAI API.  
+          </p>
+        ),
+      },
+      {
         title: "Benesse EdTech Hackathon (Audience Award Winner)",
         href: LINK.BENESSE_HACKATHON,
         period: {
@@ -478,8 +564,8 @@ export default function SectionExperiences() {
           iter: {
             title: string;
             href?: string;
-            period: { start: string; end: string } | undefined;
-            children: ReactNode;
+            period: { start: string; end: string | undefined } | undefined;
+            children: ReactNode | undefined;
           },
           index: number
         ) => {
