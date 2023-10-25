@@ -1,13 +1,4 @@
 # Portfolio
 
-https://porink0424.github.io/portfolio/
-
-## Getting Started
-
-```
-yarn dev
-```
-
-## CSS Rules
-
-改良版 RSCSS (https://zenn.dev/lollipop_onl/articles/eoz-rscss-in-css-modules) を採用
+こちらのポートフォリオは、旧バージョンです。
+`archive`ブランチに以前のバージョンがあります。
